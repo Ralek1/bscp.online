@@ -1,61 +1,114 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutzerklärung — BSCP.online</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .dse { max-width: 820px; margin: 60px auto 100px; padding: 0 20px; }
-    .dse h1 { margin-bottom: 36px; }
-    .dse h2 { font-size: 1.3rem; margin: 40px 0 10px; color: var(--color-primary); border-bottom: 2px solid var(--color-light); padding-bottom: 6px; }
-    .dse h3 { font-size: 1.05rem; margin: 24px 0 8px; }
-    .dse p, .dse li { line-height: 1.8; color: var(--color-text); margin-bottom: 12px; }
-    .dse ul { padding-left: 20px; margin-bottom: 16px; }
-    .dse .back-link { display: inline-block; margin-bottom: 40px; color: var(--color-primary); font-weight: 700; }
-    .dse .back-link:hover { color: var(--color-dark); }
-    .dse address { font-style: normal; line-height: 1.8; }
-    .dse .source { margin-top: 48px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.82rem; color: var(--color-subtle); }
+    .legal-page { max-width: 820px; margin: 60px auto 100px; padding: 0 20px; }
+    .legal-page h1 { margin-bottom: 36px; }
+    .legal-page h2 { font-size: 1.3rem; margin: 40px 0 10px; color: var(--color-primary); border-bottom: 2px solid var(--color-light); padding-bottom: 6px; }
+    .legal-page h3 { font-size: 1.05rem; margin: 24px 0 8px; }
+    .legal-page p, .legal-page li { line-height: 1.8; color: var(--color-text); margin-bottom: 12px; }
+    .legal-page ul { padding-left: 20px; margin-bottom: 16px; }
+    .legal-page address { font-style: normal; line-height: 1.9; margin-bottom: 14px; color: var(--color-text); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 40px; color: var(--color-primary); font-weight: 700; }
+    .back-link:hover { color: var(--color-dark); }
+    .source { margin-top: 48px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.82rem; color: var(--color-subtle); }
   </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="Navigation">
+<div id="progress-bar"></div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="nav" aria-label="Hauptnavigation">
   <div class="nav__inner">
-    <a href="index.html" class="nav__brand" aria-label="Zurück zur Startseite">
+    <a href="index.html" class="nav__brand" aria-label="BSCP.online — Startseite">
       <img src="logo.png" alt="BSCP Logo" class="nav__logo-img" />
     </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a></li>
+      <li><a href="index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a></li>
+      <li><a href="index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a></li>
+      <li><a href="index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a></li>
+      <li><a href="index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode umschalten">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
-<div class="dse">
-  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+<!-- Mobile Overlay -->
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a>
+  <a href="index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a>
+  <a href="index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a>
+  <a href="index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a>
+  <a href="index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+    </button>
+    <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+  </div>
+</div>
 
-  <h1>Datenschutzerklärung</h1>
+<!-- ── CONTENT ── -->
+<div class="legal-page">
+  <a href="index.html" class="back-link"
+     data-de="← Zurück zur Startseite"
+     data-en="← Back to homepage">← Zurück zur Startseite</a>
 
-  <!-- ── 1 ── -->
-  <h2>1. Datenschutz auf einen Blick</h2>
+  <h1 data-de="Datenschutzerklärung" data-en="Privacy Policy">Datenschutzerklärung</h1>
 
-  <h3>Allgemeine Hinweise</h3>
-  <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+  <!-- 1 -->
+  <h2 data-de="1. Datenschutz auf einen Blick" data-en="1. Privacy at a Glance">1. Datenschutz auf einen Blick</h2>
 
-  <h3>Datenerfassung auf dieser Website</h3>
-  <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.</p>
+  <h3 data-de="Allgemeine Hinweise" data-en="General Information">Allgemeine Hinweise</h3>
+  <p data-de="Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können."
+     data-en="The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to identify you personally.">
+    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+  </p>
 
-  <h3>Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
-  <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
+  <h3 data-de="Datenerfassung auf dieser Website" data-en="Data Collection on This Website">Datenerfassung auf dieser Website</h3>
+  <p data-de="Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen."
+     data-en="Data processing on this website is carried out by the website operator. You can find their contact details in the section 'Note on the Responsible Party' in this privacy policy.">
+    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+  </p>
 
-  <!-- ── 2 ── -->
-  <h2>2. Hosting</h2>
+  <h3 data-de="Welche Rechte haben Sie bezüglich Ihrer Daten?" data-en="What Rights Do You Have Regarding Your Data?">Welche Rechte haben Sie bezüglich Ihrer Daten?</h3>
+  <p data-de="Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen."
+     data-en="You have the right at any time to receive free information about the origin, recipient and purpose of your stored personal data. You also have the right to request the correction or deletion of this data.">
+    Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
+  </p>
+
+  <!-- 2 -->
+  <h2 data-de="2. Hosting" data-en="2. Hosting">2. Hosting</h2>
   <h3>Hostinger.com</h3>
-  <p>Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots.</p>
+  <p data-de="Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots."
+     data-en="This website is hosted externally. Personal data collected on this website is stored on the servers of the host. External hosting serves the purpose of fulfilling the contract with our potential and existing customers (Art. 6 para. 1 lit. b GDPR) and in the interest of a secure, fast and efficient provision of our online services.">
+    Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots.
+  </p>
 
-  <!-- ── 3 ── -->
-  <h2>3. Hinweis zur verantwortlichen Stelle</h2>
-  <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+  <!-- 3 -->
+  <h2 data-de="3. Hinweis zur verantwortlichen Stelle" data-en="3. Note on the Responsible Party">3. Hinweis zur verantwortlichen Stelle</h2>
+  <p data-de="Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:"
+     data-en="The party responsible for data processing on this website is:">
+    Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+  </p>
   <address>
     Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)<br />
     Rosenleite 16<br />
@@ -63,34 +116,59 @@
     Tel: <a href="tel:+4916099611580">+49 160 99611580</a><br />
     E-Mail: <a href="mailto:info@bscp.online">info@bscp.online</a>
   </address>
-  <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
+  <p data-de="Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet."
+     data-en="The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data.">
+    Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.
+  </p>
 
-  <h3>Ihre Rechte</h3>
-  <h3>Auskunft, Berichtigung und Löschung</h3>
-  <p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.</p>
+  <h3 data-de="Ihre Rechte" data-en="Your Rights">Ihre Rechte</h3>
 
-  <h3>Widerspruchsrecht</h3>
-  <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen (Art. 21 DSGVO).</p>
+  <h3 data-de="Auskunft, Berichtigung und Löschung" data-en="Access, Correction and Deletion">Auskunft, Berichtigung und Löschung</h3>
+  <p data-de="Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten."
+     data-en="You have the right at any time to receive free information about your stored personal data, their origin and recipients and the purpose of data processing, as well as the right to correct or delete this data.">
+    Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.
+  </p>
 
-  <h3>Beschwerderecht</h3>
-  <p>Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu.</p>
+  <h3 data-de="Widerspruchsrecht" data-en="Right to Object">Widerspruchsrecht</h3>
+  <p data-de="Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen (Art. 21 DSGVO)."
+     data-en="You have the right to object to the processing of your personal data on grounds relating to your particular situation (Art. 21 GDPR).">
+    Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen (Art. 21 DSGVO).
+  </p>
 
-  <!-- ── 4 ── -->
-  <h2>4. Cookies</h2>
-  <p>Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Cookies haben verschiedene Funktionen und sind teilweise technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden.</p>
+  <h3 data-de="Beschwerderecht" data-en="Right to Lodge a Complaint">Beschwerderecht</h3>
+  <p data-de="Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu."
+     data-en="In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority.">
+    Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde zu.
+  </p>
 
-  <!-- ── 5 ── -->
-  <h2>5. Datenerfassung</h2>
+  <!-- 4 -->
+  <h2 data-de="4. Cookies" data-en="4. Cookies">4. Cookies</h2>
+  <p data-de="Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Cookies haben verschiedene Funktionen und sind teilweise technisch notwendig, da bestimmte Webseitenfunktionen ohne diese nicht funktionieren würden."
+     data-en="Our website uses so-called 'cookies'. Cookies are small data packages that do not cause any damage on your device. They are stored either temporarily for the duration of a session (session cookies) or permanently (persistent cookies) on your device. Cookies have various functions and are partly technically necessary, as certain website functions would not work without them.">
+    Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+  </p>
 
-  <h3>Kontaktformular</h3>
-  <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+  <!-- 5 -->
+  <h2 data-de="5. Datenerfassung" data-en="5. Data Collection">5. Datenerfassung</h2>
 
-  <h3>Anfrage per E-Mail, Telefon</h3>
-  <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.</p>
+  <h3 data-de="Kontaktformular" data-en="Contact Form">Kontaktformular</h3>
+  <p data-de="Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert."
+     data-en="When you submit inquiries to us via the contact form, the details you provide in the inquiry form, including any contact data you provide, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions.">
+    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+  </p>
 
-  <!-- ── 6 ── -->
-  <h2>6. Soziale Medien</h2>
-  <p>Auf dieser Website werden Elemente von sozialen Medien verwendet (z. B. Facebook, X/Twitter, Instagram, Pinterest). Diese Elemente verwenden wir zusammen mit der „Shariff"-Lösung, um den Datenschutz zu gewährleisten.</p>
+  <h3 data-de="Anfrage per E-Mail, Telefon" data-en="Inquiries by Email, Phone">Anfrage per E-Mail, Telefon</h3>
+  <p data-de="Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet."
+     data-en="If you contact us by email, phone or fax, your inquiry including all personal data arising therefrom will be stored and processed by us for the purpose of handling your request.">
+    Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.
+  </p>
+
+  <!-- 6 -->
+  <h2 data-de="6. Soziale Medien" data-en="6. Social Media">6. Soziale Medien</h2>
+  <p data-de="Auf dieser Website werden Elemente von sozialen Medien verwendet (z. B. Facebook, X/Twitter, Instagram, Pinterest). Diese Elemente verwenden wir zusammen mit der „Shariff"-Lösung, um den Datenschutz zu gewährleisten."
+     data-en="This website uses elements of social media (e.g. Facebook, X/Twitter, Instagram, Pinterest). We use these elements together with the 'Shariff' solution to ensure data protection.">
+    Auf dieser Website werden Elemente von sozialen Medien verwendet. Diese Elemente verwenden wir zusammen mit der „Shariff"-Lösung, um den Datenschutz zu gewährleisten.
+  </p>
   <ul>
     <li><strong>Facebook:</strong> Meta Platforms Ireland Limited</li>
     <li><strong>X (Twitter):</strong> X Corp., San Francisco</li>
@@ -98,60 +176,79 @@
     <li><strong>Pinterest:</strong> Pinterest Europe Ltd., Dublin</li>
   </ul>
 
-  <!-- ── 7 ── -->
-  <h2>7. Newsletter</h2>
-  <p>Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind. Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+  <!-- 7 -->
+  <h2 data-de="7. Newsletter" data-en="7. Newsletter">7. Newsletter</h2>
+  <p data-de="Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind. Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)."
+     data-en="If you would like to subscribe to the newsletter offered on the website, we require an email address from you as well as information that allows us to verify that you are the owner of the email address provided. Processing is based exclusively on your consent (Art. 6 para. 1 lit. a GDPR).">
+    Wenn Sie den auf der Website angebotenen Newsletter beziehen möchten, benötigen wir von Ihnen eine E-Mail-Adresse sowie Informationen, welche uns die Überprüfung gestatten, dass Sie der Inhaber der angegebenen E-Mail-Adresse sind. Die Verarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).
+  </p>
 
-  <!-- ── 8 ── -->
-  <h2>8. Plugins und Tools</h2>
+  <!-- 8 -->
+  <h2 data-de="8. Plugins und Tools" data-en="8. Plugins and Tools">8. Plugins und Tools</h2>
 
-  <h3>YouTube mit erweitertem Datenschutz</h3>
-  <p>Diese Website bindet Videos der Website YouTube ein. Betreiber ist die Google Ireland Limited. Wir nutzen YouTube im erweiterten Datenschutzmodus. Videos, die im erweiterten Datenschutzmodus abgespielt werden, werden nach Aussage von YouTube nicht zur Personalisierung des Surfens auf YouTube eingesetzt.</p>
+  <h3 data-de="YouTube mit erweitertem Datenschutz" data-en="YouTube with Enhanced Privacy">YouTube mit erweitertem Datenschutz</h3>
+  <p data-de="Diese Website bindet Videos der Website YouTube ein. Betreiber ist die Google Ireland Limited. Wir nutzen YouTube im erweiterten Datenschutzmodus. Videos, die im erweiterten Datenschutzmodus abgespielt werden, werden nach Aussage von YouTube nicht zur Personalisierung des Surfens auf YouTube eingesetzt."
+     data-en="This website embeds videos from YouTube. The operator is Google Ireland Limited. We use YouTube in enhanced privacy mode. Videos played in enhanced privacy mode are, according to YouTube, not used to personalise browsing on YouTube.">
+    Diese Website bindet Videos der Website YouTube ein. Betreiber ist die Google Ireland Limited. Wir nutzen YouTube im erweiterten Datenschutzmodus.
+  </p>
 
-  <h3>SSL- bzw. TLS-Verschlüsselung</h3>
-  <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+  <h3 data-de="SSL- bzw. TLS-Verschlüsselung" data-en="SSL/TLS Encryption">SSL- bzw. TLS-Verschlüsselung</h3>
+  <p data-de="Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile."
+     data-en="For security reasons and to protect the transmission of confidential content, this site uses SSL or TLS encryption. You can recognise an encrypted connection by the fact that the address line of the browser changes from 'http://' to 'https://' and by the lock symbol in your browser line.">
+    Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung.
+  </p>
 
-  <p class="source">Quelle: <a href="https://www.e-recht24.de" target="_blank" rel="noopener">e-recht24.de</a></p>
+  <p class="source">
+    <span data-de="Quelle:" data-en="Source:">Quelle:</span>
+    <a href="https://www.e-recht24.de" target="_blank" rel="noopener">e-recht24.de</a>
+  </p>
 </div>
 
-<!-- Footer -->
+<!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="footer__grid container">
     <div class="footer__brand">
       <a href="index.html"><img src="logo.png" alt="BSCP Logo" class="footer__logo" /></a>
-      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+      <p class="footer__tagline"
+         data-de="Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist"
+         data-en="Freelance Technical Buyer &amp; SQM Specialist">
+        Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist
+      </p>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Kontakt</h4>
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
       <ul class="footer__list">
-        <li>Egor Becker</li>
         <li>Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)</li>
         <li>Rosenleite 16, 90619 Trautskirchen</li>
-        <li><a href="tel:+491746357232">+49 174 635 7232</a></li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
         <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Navigation</h4>
+      <h4 class="footer__heading" data-de="Navigation" data-en="Navigation">Navigation</h4>
       <ul class="footer__list">
-        <li><a href="index.html">Startseite</a></li>
-        <li><a href="index.html#about">Über mich</a></li>
-        <li><a href="index.html#termin">Termin</a></li>
-        <li><a href="index.html#contact">Kontakt</a></li>
+        <li><a href="index.html"          data-de="Startseite"  data-en="Home">Startseite</a></li>
+        <li><a href="index.html#about"    data-de="Über mich"   data-en="About">Über mich</a></li>
+        <li><a href="index.html#termin"   data-de="Termin"      data-en="Appointment">Termin</a></li>
+        <li><a href="index.html#contact"  data-de="Kontakt"     data-en="Contact">Kontakt</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Rechtliches</h4>
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
       <ul class="footer__list">
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html"   data-de="Impressum"   data-en="Legal Notice">Impressum</a></li>
+        <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© <script>document.write(new Date().getFullYear())</script> Egor Becker — BSCP Supply Chain &amp; Procurement. Alle Rechte vorbehalten.</p>
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP).
+      <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span>
+    </p>
   </div>
 </footer>
 
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 </body>
 </html>

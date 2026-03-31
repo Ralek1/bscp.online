@@ -1,47 +1,170 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Impressum — BSCP.online</title>
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    .impressum { max-width: 760px; margin: 80px auto; padding: 0 20px; }
-    .impressum h1 { margin-bottom: 32px; }
-    .impressum h2 { margin: 32px 0 8px; font-size: 1.2rem; }
-    .impressum p  { margin-bottom: 12px; color: var(--color-text); line-height: 1.8; }
-    .back-link    { display: inline-block; margin-bottom: 40px; color: var(--color-primary); font-weight: 700; }
+    .legal-page { max-width: 760px; margin: 60px auto 100px; padding: 0 20px; }
+    .legal-page h1 { margin-bottom: 36px; }
+    .legal-page h2 { font-size: 1.25rem; margin: 36px 0 10px; color: var(--color-primary); border-bottom: 2px solid var(--color-light); padding-bottom: 6px; }
+    .legal-page p  { margin-bottom: 14px; color: var(--color-text); line-height: 1.8; }
+    .legal-page address { font-style: normal; line-height: 1.9; margin-bottom: 14px; color: var(--color-text); }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 40px; color: var(--color-primary); font-weight: 700; }
+    .back-link:hover { color: var(--color-dark); }
   </style>
 </head>
 <body>
-<div class="impressum">
-  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-  <h1>Impressum</h1>
 
-  <h2>Angaben gemäß § 5 TMG</h2>
-  <p>
+<div id="progress-bar"></div>
+
+<!-- ── NAVIGATION ── -->
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand" aria-label="BSCP.online — Startseite">
+      <img src="logo.png" alt="BSCP Logo" class="nav__logo-img" />
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a></li>
+      <li><a href="index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a></li>
+      <li><a href="index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a></li>
+      <li><a href="index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a></li>
+      <li><a href="index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode umschalten">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a>
+  <a href="index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a>
+  <a href="index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a>
+  <a href="index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a>
+  <a href="index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+    </button>
+    <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+  </div>
+</div>
+
+<!-- ── CONTENT ── -->
+<div class="legal-page">
+  <a href="index.html" class="back-link"
+     data-de="← Zurück zur Startseite"
+     data-en="← Back to homepage">← Zurück zur Startseite</a>
+
+  <h1 data-de="Impressum" data-en="Legal Notice">Impressum</h1>
+
+  <h2 data-de="Angaben gemäß § 5 TMG" data-en="Information pursuant to § 5 TMG">Angaben gemäß § 5 TMG</h2>
+  <address>
     Egor Becker<br />
-    BSCP — Becker Supply Chain &amp; Procurement<br />
-    [Straße und Hausnummer]<br />
-    [PLZ Ort], Deutschland
-  </p>
+    Becker Supply Chain &amp; Procurement (BSCP)<br />
+    Rosenleite 16<br />
+    90619 Trautskirchen<br />
+    <span data-de="Deutschland" data-en="Germany">Deutschland</span>
+  </address>
 
-  <h2>Kontakt</h2>
+  <h2 data-de="Kontakt" data-en="Contact">Kontakt</h2>
   <p>
+    Tel: <a href="tel:+4916099611580">+49 160 99611580</a><br />
     E-Mail: <a href="mailto:info@bscp.online">info@bscp.online</a><br />
     Website: <a href="https://bscp.online">bscp.online</a>
   </p>
 
-  <h2>Umsatzsteuer-ID</h2>
-  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-ID eintragen]</p>
+  <h2 data-de="Umsatzsteuer-ID" data-en="VAT ID">Umsatzsteuer-ID</h2>
+  <p data-de="Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-ID eintragen]"
+     data-en="VAT identification number pursuant to § 27a UStG: [VAT ID to be added]">
+    Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-ID eintragen]
+  </p>
 
-  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-  <p>Egor Becker (Anschrift wie oben)</p>
+  <h2 data-de="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV"
+      data-en="Responsible for content pursuant to § 55 para. 2 RStV">
+    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+  </h2>
+  <p data-de="Egor Becker (Anschrift wie oben)" data-en="Egor Becker (address as above)">
+    Egor Becker (Anschrift wie oben)
+  </p>
 
-  <h2>Haftungsausschluss</h2>
-  <p>Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine Gewähr.</p>
+  <h2 data-de="Haftungsausschluss" data-en="Disclaimer">Haftungsausschluss</h2>
+  <p data-de="Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine Gewähr."
+     data-en="The contents of this website have been created with the utmost care. We do not guarantee the accuracy, completeness or timeliness of the content.">
+    Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir keine Gewähr.
+  </p>
+
+  <h2 data-de="Haftung für Links" data-en="Liability for Links">Haftung für Links</h2>
+  <p data-de="Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen."
+     data-en="Our website contains links to external third-party websites, over whose content we have no control. Therefore, we cannot accept any liability for these external contents.">
+    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+  </p>
+
+  <h2 data-de="Urheberrecht" data-en="Copyright">Urheberrecht</h2>
+  <p data-de="Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors."
+     data-en="The content and works on these pages created by the site operator are subject to German copyright law. Duplication, processing, distribution and any form of commercialisation of such material beyond the scope of the copyright law shall require the prior written consent of its respective author.">
+    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors.
+  </p>
 </div>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="index.html"><img src="logo.png" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline"
+         data-de="Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist"
+         data-en="Freelance Technical Buyer &amp; SQM Specialist">
+        Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist
+      </p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)</li>
+        <li>Rosenleite 16, 90619 Trautskirchen</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Navigation" data-en="Navigation">Navigation</h4>
+      <ul class="footer__list">
+        <li><a href="index.html"          data-de="Startseite"  data-en="Home">Startseite</a></li>
+        <li><a href="index.html#about"    data-de="Über mich"   data-en="About">Über mich</a></li>
+        <li><a href="index.html#termin"   data-de="Termin"      data-en="Appointment">Termin</a></li>
+        <li><a href="index.html#contact"  data-de="Kontakt"     data-en="Contact">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="impressum.html"   data-de="Impressum"   data-en="Legal Notice">Impressum</a></li>
+        <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP).
+      <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span>
+    </p>
+  </div>
+</footer>
+
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 </body>
 </html>
