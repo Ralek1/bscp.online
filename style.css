@@ -783,15 +783,68 @@ section { padding: 80px 20px; }
 /* ============================================================
    FOOTER
    ============================================================ */
-footer {
+.footer {
   background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 24px 20px;
-  font-size: 0.85rem;
+  color: #bbb;
+  font-size: 0.88rem;
 }
-footer a { color: var(--color-primary); }
-footer a:hover { color: var(--color-dark); }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  padding-top: 56px;
+  padding-bottom: 48px;
+}
+
+.footer__logo {
+  height: 44px;
+  width: auto;
+  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg);
+  margin-bottom: 14px;
+  display: block;
+}
+.footer__tagline {
+  color: #888;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+.footer__heading {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__list li { color: #aaa; }
+.footer__list a { color: #aaa; transition: color var(--transition); }
+.footer__list a:hover { color: var(--color-primary); }
+
+.footer__bottom {
+  border-top: 1px solid #222;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+@media (min-width: 640px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .footer__grid { grid-template-columns: 2fr 1.5fr 1fr 1fr; }
+}
 
 /* ============================================================
    SECTION DIVIDERS
