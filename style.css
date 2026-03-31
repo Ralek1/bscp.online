@@ -708,16 +708,11 @@ section { padding: 80px 20px; }
 .termin__inner h2 { margin-bottom: 12px; }
 .termin__intro { color: var(--color-subtle); margin-bottom: 40px; font-size: 1rem; }
 
-.cal-embed-placeholder {
-  background: var(--color-light);
-  border: 2px dashed var(--color-primary);
+#my-cal-inline-30min {
+  min-height: 600px;
   border-radius: 16px;
-  padding: 60px 20px;
-  text-align: center;
-  color: var(--color-subtle);
+  overflow: hidden;
 }
-.cal-embed-placeholder p { font-size: 0.9rem; margin-top: 8px; }
-.cal-embed-placeholder strong { color: var(--color-primary); }
 
 /* ============================================================
    SECTION 8 — KONTAKT
