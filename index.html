@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Egor Becker — Freelancer Technischer Einkäufer & SQM-Spezialist | BSCP.online</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bscp.online/" />
+  <meta property="og:title"       content="Egor Becker — Freelancer Technischer Einkäufer & SQM-Spezialist" />
+  <meta property="og:description" content="Stabile Lieferketten, qualifizierte Lieferanten und nachweislich zweistellige Einsparungen. Remote-first, verfügbar für Projekteinsätze." />
+  <meta property="og:image"       content="https://bscp.online/og-image.jpg" />
+  <meta name="description"        content="Stabile Lieferketten, qualifizierte Lieferanten und nachweislich zweistellige Einsparungen. Remote-first, verfügbar für Projekteinsätze." />
+
+  <!-- JSON-LD Person Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Egor Becker",
+    "jobTitle": "Freelancer Technischer Einkäufer & SQM-Spezialist",
+    "url": "https://bscp.online",
+    "sameAs": [],
+    "knowsAbout": ["Technischer Einkauf", "Supplier Quality Management", "SAP S/4HANA", "ISO 9001", "ISO 13485", "FAI", "Audits"]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── PROGRESS BAR ──────────────────────────────────────── -->
+<div id="progress-bar" role="progressbar" aria-label="Scroll-Fortschritt" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════ -->
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+
+    <!-- Brand -->
+    <a href="#hero" class="nav__brand" aria-label="BSCP.online — Startseite">
+      <span class="nav__logo">BSCP</span>
+      <span class="nav__logo-sub">Egor Becker</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav__links" role="list">
+      <li><a href="#about"     class="nav__link" data-de="Über mich"        data-en="About">Über mich</a></li>
+      <li><a href="#career"    class="nav__link" data-de="Projekte"          data-en="Projects">Projekte</a></li>
+      <li><a href="#downloads" class="nav__link" data-de="Downloads"         data-en="Downloads">Downloads</a></li>
+      <li><a href="#termin"    class="nav__link" data-de="Termin"            data-en="Appointment">Termin</a></li>
+      <li><a href="#contact"   class="nav__link" data-de="Kontakt"           data-en="Contact">Kontakt</a></li>
+    </ul>
+
+    <!-- Controls -->
+    <div class="nav__controls">
+      <!-- Dark Mode -->
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode umschalten" title="Dark/Light Mode">
+        <!-- Moon icon (shown in light mode) -->
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <!-- Sun icon (shown in dark mode) -->
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2"/><line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2"/><line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <!-- Language -->
+      <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+      <!-- Hamburger -->
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Overlay -->
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <a href="#about"     class="nav__link" data-de="Über mich"   data-en="About">Über mich</a>
+  <a href="#career"    class="nav__link" data-de="Projekte"     data-en="Projects">Projekte</a>
+  <a href="#downloads" class="nav__link" data-de="Downloads"    data-en="Downloads">Downloads</a>
+  <a href="#termin"    class="nav__link" data-de="Termin"       data-en="Appointment">Termin</a>
+  <a href="#contact"   class="nav__link" data-de="Kontakt"      data-en="Contact">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+    </button>
+    <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+
+  <!-- Background SVG pattern -->
+  <svg class="hero__bg-pattern" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="geo" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+        <path d="M0 30 L30 0 L60 30 L30 60 Z" fill="none" stroke="white" stroke-width="1"/>
+        <line x1="0" y1="0" x2="60" y2="60" stroke="white" stroke-width="0.5"/>
+        <line x1="60" y1="0" x2="0" y2="60" stroke="white" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#geo)"/>
+  </svg>
+
+  <div class="hero__content">
+    <!-- Photo -->
+    <div class="hero__photo-wrap">
+      <img src="profile.webp" alt="Egor Becker — Freelancer Technischer Einkäufer & SQM-Spezialist" class="hero__photo" width="180" height="180" />
+    </div>
+
+    <!-- Availability badge -->
+    <span class="hero__badge" data-de="Sofort verfügbar" data-en="Immediately available">Sofort verfügbar</span>
+
+    <!-- Name -->
+    <h1 class="hero__h1">EGOR BECKER</h1>
+
+    <!-- Subtitle -->
+    <p class="hero__subtitle"
+       data-de="Freelancer Technischer Einkäufer & SQM-Spezialist"
+       data-en="Freelance Technical Buyer & Supplier Quality Management Specialist">
+      Freelancer Technischer Einkäufer & SQM-Spezialist
+    </p>
+
+    <!-- Tags -->
+    <div class="hero__tags" role="list" aria-label="Schwerpunkte">
+      <span class="tag" role="listitem" data-de="Kosteneinsparung"  data-en="Cost Savings">Kosteneinsparung</span>
+      <span class="tag" role="listitem" data-de="Kernenergie"       data-en="Nuclear Energy">Kernenergie</span>
+      <span class="tag" role="listitem" data-de="Wasserstoff/H₂O"   data-en="Hydrogen/H₂O">Wasserstoff/H₂O</span>
+      <span class="tag" role="listitem">SAP S/4HANA</span>
+      <span class="tag" role="listitem">FAI</span>
+      <span class="tag" role="listitem" data-de="Audits" data-en="Audits">Audits</span>
+    </div>
+
+    <!-- CTAs -->
+    <div class="hero__ctas">
+      <a href="#termin"  class="btn btn--primary"  data-de="Termin buchen"    data-en="Book appointment">Termin buchen</a>
+      <a href="#about"   class="btn btn--outline"  data-de="Profil ansehen"   data-en="View profile">Profil ansehen</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 2 — ÜBER MICH
+══════════════════════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="about__grid">
+
+    <!-- Text -->
+    <div class="about__text">
+      <span class="section-label" data-de="Über mich" data-en="About me">Über mich</span>
+      <h2 id="about-heading" data-de="Ihr Spezialist für Einkauf & Qualität" data-en="Your Specialist for Procurement & Quality">Ihr Spezialist für Einkauf & Qualität</h2>
+
+      <p class="lang-de"
+         data-de="Liefert stabile Lieferketten, qualifizierte Lieferanten und nachweislich zweistellige Einsparungen – auch unter hohem Zeit- und Kostendruck. Freiberuflicher Technischer Einkäufer und Supplier-Quality-Spezialist mit über 9 Jahren Erfahrung in sicherheits- und qualitätskritischen Industrieprojekten – von europäischen Kernkraftwerkskomponenten bis hin zu mobilen Elektrolyseuren."
+         data-en="Delivers stable supply chains, qualified suppliers, and proven double-digit savings – even under high time and cost pressure. Freelance Technical Buyer and Supplier Quality Specialist with over 9 years of experience in safety-critical industrial projects – from machined nuclear components to mobile electrolysers.">
+        Liefert stabile Lieferketten, qualifizierte Lieferanten und nachweislich zweistellige Einsparungen – auch unter hohem Zeit- und Kostendruck. Freiberuflicher Technischer Einkäufer und Supplier-Quality-Spezialist mit über 9 Jahren Erfahrung in sicherheits- und qualitätskritischen Industrieprojekten – von europäischen Kernkraftwerkskomponenten bis hin zu mobilen Elektrolyseuren.
+      </p>
+
+      <p data-de="Erfahren in Lieferantenaudits, FAI und Reklamationsmanagement nach ISO 9001 / ISO 13485. Sicher im Umgang mit SAP S/4HANA, Onventis und weiteren branchenüblichen Tools. Verfügbar für Projekteinsätze auf Tagesbasis – remote-first, bei Bedarf begrenzt vor Ort."
+         data-en="Experienced in supplier audits, FAI, and complaint management (ISO 9001 / ISO 13485). Proficient in SAP S/4HANA, Onventis, and industry-standard tools. Available for project-based engagements – remote-first, limited on-site availability.">
+        Erfahren in Lieferantenaudits, FAI und Reklamationsmanagement nach ISO 9001 / ISO 13485. Sicher im Umgang mit SAP S/4HANA, Onventis und weiteren branchenüblichen Tools. Verfügbar für Projekteinsätze auf Tagesbasis – remote-first, bei Bedarf begrenzt vor Ort.
+      </p>
+
+      <!-- Sector badges -->
+      <div class="about__badges" role="list" aria-label="Branchen">
+        <span class="tag--dark" style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;background:#eee;color:#1a1a1a;border:1px solid #ddd" role="listitem" data-de="Maschinenbau"       data-en="Mechanical Engineering">Maschinenbau</span>
+        <span class="tag--dark" style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;background:#eee;color:#1a1a1a;border:1px solid #ddd" role="listitem" data-de="Kernenergie"         data-en="Nuclear Energy">Kernenergie</span>
+        <span class="tag--dark" style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;background:#eee;color:#1a1a1a;border:1px solid #ddd" role="listitem" data-de="Wasserstoff"         data-en="Hydrogen">Wasserstoff</span>
+        <span class="tag--dark" style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;background:#eee;color:#1a1a1a;border:1px solid #ddd" role="listitem" data-de="Elektrotechnik"      data-en="Electrical Engineering">Elektrotechnik</span>
+        <span class="tag--dark" style="display:inline-block;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;background:#eee;color:#1a1a1a;border:1px solid #ddd" role="listitem" data-de="Medizintechnik"      data-en="Medical Technology">Medizintechnik</span>
+      </div>
+    </div>
+
+    <!-- Right column: photo + stats -->
+    <div class="about__right">
+      <div class="about__photo-wrap">
+        <img src="about-photo.webp"
+             alt="Egor Becker — Technischer Einkäufer & SQM-Spezialist, verschränkte Arme"
+             class="about__photo" />
+      </div>
+
+    <!-- Stats -->
+    <div class="about__stats" role="list" aria-label="Kennzahlen">
+      <div class="stat-box" role="listitem">
+        <div class="stat-box__value">9+</div>
+        <div class="stat-box__label" data-de="Jahre Erfahrung" data-en="Years of experience">Jahre Erfahrung</div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-box__value">2</div>
+        <div class="stat-box__label" data-de="Kontinente" data-en="Continents">Kontinente</div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-box__value">100+</div>
+        <div class="stat-box__label" data-de="Qualifizierte Lieferanten" data-en="Qualified suppliers">Qualifizierte Lieferanten</div>
+      </div>
+      <div class="stat-box" role="listitem">
+        <div class="stat-box__value">~10%</div>
+        <div class="stat-box__label" data-de="Ø Einsparungen" data-en="Avg. savings">Ø Einsparungen</div>
+      </div>
+    </div>
+
+    </div><!-- /.about__right -->
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 3 — BERUFSERFAHRUNG
+══════════════════════════════════════════════════════════ -->
+<section id="career" aria-labelledby="career-heading">
+  <div class="career__inner">
+    <span class="section-label" data-de="Berufserfahrung" data-en="Career">Berufserfahrung</span>
+    <h2 id="career-heading" data-de="Projekte & Stationen" data-en="Projects & Experience">Projekte & Stationen</h2>
+
+    <div class="timeline" role="list">
+
+      <!-- BSCP -->
+      <div class="timeline__item" role="listitem">
+        <div class="timeline__company">BSCP — Becker Supply Chain & Procurement</div>
+        <div class="timeline__role"
+             data-de="Freiberuflicher Technischer Einkäufer & SQM-Spezialist"
+             data-en="Freelance Technical Buyer & SQM Specialist">
+          Freiberuflicher Technischer Einkäufer & SQM-Spezialist
+        </div>
+        <span class="timeline__period">06/2025 – <span data-de="heute" data-en="present">heute</span></span>
+      </div>
+
+      <!-- ELGECO -->
+      <div class="timeline__item" role="listitem">
+        <div class="timeline__company">ELGECO GmbH</div>
+        <div class="timeline__role"
+             data-de="Technischer Einkäufer / Supplier Quality Engineer"
+             data-en="Technical Buyer / Supplier Quality Engineer">
+          Technischer Einkäufer / Supplier Quality Engineer
+        </div>
+        <span class="timeline__period">04/2023 – <span data-de="heute" data-en="present">heute</span></span>
+      </div>
+
+      <!-- Siemens Energy -->
+      <div class="timeline__item" role="listitem">
+        <div class="timeline__company">Siemens Energy AG</div>
+        <div class="timeline__role"
+             data-de="Technischer Einkäufer — Kernenergiekomponenten"
+             data-en="Technical Buyer — Nuclear Energy Components">
+          Technischer Einkäufer — Kernenergiekomponenten
+        </div>
+        <span class="timeline__period">05/2022 – 05/2023</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 4 — ROI RECHNER
+══════════════════════════════════════════════════════════ -->
+<section id="roi" aria-labelledby="roi-heading">
+  <div class="roi__inner">
+    <span class="section-label" style="color:rgba(255,255,255,0.8)" data-de="ROI Rechner" data-en="ROI Calculator">ROI Rechner</span>
+    <h2 id="roi-heading" data-de="Ihr Einsparpotenzial" data-en="Your Savings Potential">Ihr Einsparpotenzial</h2>
+    <p class="roi__subtitle"
+       data-de="Basierend auf branchenüblichen 10 % Einsparung durch Framezone GmbH"
+       data-en="Based on industry-average 10% savings by Framezone GmbH">
+      Basierend auf branchenüblichen 10 % Einsparung durch Framezone GmbH
+    </p>
+
+    <div class="roi-calculator">
+      <div class="roi-inputs">
+
+        <!-- Volume -->
+        <div class="roi-input">
+          <label for="roi-volume" data-de="Jährliches Einkaufsvolumen" data-en="Annual procurement volume">Jährliches Einkaufsvolumen</label>
+          <input type="range" id="roi-volume" min="100000" max="10000000" step="100000" value="1000000"
+                 aria-label="Einkaufsvolumen" />
+          <div class="range-display">
+            <span>100.000 €</span>
+            <span class="range-value" id="roi-volume-display">1.000.000 €</span>
+          </div>
+        </div>
+
+        <!-- Years -->
+        <div class="roi-input">
+          <label for="roi-years" data-de="Zeitraum (Jahre)" data-en="Timeframe (years)">Zeitraum (Jahre)</label>
+          <input type="range" id="roi-years" min="1" max="10" step="1" value="3"
+                 aria-label="Zeitraum in Jahren" />
+          <div class="range-display">
+            <span>1</span>
+            <span class="range-value" id="roi-years-display">3 Jahre</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Result -->
+      <div class="roi-result" aria-live="polite" aria-label="Berechnetes Einsparpotenzial">
+        <div class="roi-result__label" data-de="Geschätztes Einsparpotenzial" data-en="Estimated savings potential">Geschätztes Einsparpotenzial</div>
+        <div class="roi-result__value" id="roi-result-value">300.000 €</div>
+        <div class="roi-result__note"
+             data-de="* Richtwert auf Basis 10 % jährlicher Einsparung"
+             data-en="* Indicative value based on 10% annual savings">
+          * Richtwert auf Basis 10 % jährlicher Einsparung
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="roi-cta">
+        <a href="#termin" class="btn btn--primary"
+           data-de="Jetzt Termin buchen"
+           data-en="Book appointment now">Jetzt Termin buchen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 5 — SKILLS
+══════════════════════════════════════════════════════════ -->
+<section id="skills" aria-labelledby="skills-heading">
+  <div class="skills__inner">
+    <span class="section-label" data-de="Kompetenzen" data-en="Skills">Kompetenzen</span>
+    <h2 id="skills-heading" data-de="Fähigkeiten & Expertise" data-en="Skills & Expertise">Fähigkeiten & Expertise</h2>
+
+    <div class="skills__grid" role="list">
+
+      <!-- Card 1: Einkauf -->
+      <div class="skill-card" role="listitem">
+        <div class="skill-card__icon" aria-hidden="true">🛒</div>
+        <h3 class="skill-card__title" data-de="Einkauf & Beschaffung" data-en="Purchasing & Procurement">Einkauf & Beschaffung</h3>
+        <div class="skill-card__tags">
+          <span class="tag--dark" data-de="Technischer Einkauf"   data-en="Technical Procurement">Technischer Einkauf</span>
+          <span class="tag--dark" data-de="Lieferantenqualifikation" data-en="Supplier Qualification">Lieferantenqualifikation</span>
+          <span class="tag--dark" data-de="Preisverhandlung"      data-en="Price Negotiation">Preisverhandlung</span>
+          <span class="tag--dark" data-de="Kosteneinsparung"      data-en="Cost Savings">Kosteneinsparung</span>
+          <span class="tag--dark" data-de="Vertragsgestaltung"    data-en="Contract Design">Vertragsgestaltung</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Quality -->
+      <div class="skill-card" role="listitem">
+        <div class="skill-card__icon" aria-hidden="true">✅</div>
+        <h3 class="skill-card__title" data-de="Qualitätsmanagement" data-en="Quality Management">Qualitätsmanagement</h3>
+        <div class="skill-card__tags">
+          <span class="tag--dark">ISO 9001</span>
+          <span class="tag--dark">ISO 13485</span>
+          <span class="tag--dark">FAI</span>
+          <span class="tag--dark" data-de="Lieferantenaudits"     data-en="Supplier Audits">Lieferantenaudits</span>
+          <span class="tag--dark" data-de="Reklamationsmanagement" data-en="Complaint Management">Reklamationsmanagement</span>
+        </div>
+      </div>
+
+      <!-- Card 3: Tools -->
+      <div class="skill-card" role="listitem">
+        <div class="skill-card__icon" aria-hidden="true">🔧</div>
+        <h3 class="skill-card__title" data-de="Tools & Systeme" data-en="Tools & Systems">Tools & Systeme</h3>
+        <div class="skill-card__tags">
+          <span class="tag--dark">SAP S/4HANA</span>
+          <span class="tag--dark">Onventis</span>
+          <span class="tag--dark">MS Office 365</span>
+          <span class="tag--dark">Cal.com</span>
+          <span class="tag--dark">Formspree</span>
+        </div>
+      </div>
+
+      <!-- Card 4: Branches -->
+      <div class="skill-card" role="listitem">
+        <div class="skill-card__icon" aria-hidden="true">🏭</div>
+        <h3 class="skill-card__title" data-de="Branchen" data-en="Industries">Branchen</h3>
+        <div class="skill-card__tags">
+          <span class="tag--dark" data-de="Kernenergie"    data-en="Nuclear Energy">Kernenergie</span>
+          <span class="tag--dark" data-de="Wasserstoff"    data-en="Hydrogen">Wasserstoff</span>
+          <span class="tag--dark" data-de="Maschinenbau"   data-en="Mechanical Engineering">Maschinenbau</span>
+          <span class="tag--dark" data-de="Medizintechnik" data-en="Medical Technology">Medizintechnik</span>
+          <span class="tag--dark" data-de="Elektrotechnik" data-en="Electrical Engineering">Elektrotechnik</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 6 — DOWNLOADS
+══════════════════════════════════════════════════════════ -->
+<section id="downloads" aria-labelledby="downloads-heading">
+  <div class="downloads__inner">
+    <span class="section-label" data-de="Downloads" data-en="Downloads">Downloads</span>
+    <h2 id="downloads-heading" data-de="Dokumente & Ressourcen" data-en="Documents & Resources">Dokumente & Ressourcen</h2>
+
+    <div class="downloads__grid" role="list">
+
+      <!-- One-Pager -->
+      <div class="download__card" role="listitem">
+        <div class="download__card__header">
+          <h3 class="download__card__title" data-de="One-Pager" data-en="One-Pager">One-Pager</h3>
+          <span class="download__badge" data-de="Dokument" data-en="Document">Dokument</span>
+        </div>
+        <p data-de="Kurzprofil als PDF – ideal für den ersten Kontakt und Projektanfragen."
+           data-en="Short profile as PDF – ideal for first contact and project inquiries.">
+          Kurzprofil als PDF – ideal für den ersten Kontakt und Projektanfragen.
+        </p>
+        <a href="#" class="btn btn--orange download__btn" aria-label="One-Pager herunterladen"
+           data-de="⬇ Herunterladen" data-en="⬇ Download">⬇ Herunterladen</a>
+      </div>
+
+      <!-- Detailprofil -->
+      <div class="download__card" role="listitem">
+        <div class="download__card__header">
+          <h3 class="download__card__title" data-de="Detailprofil (PDF)" data-en="Detailed Profile (PDF)">Detailprofil (PDF)</h3>
+          <span class="download__badge" data-de="Dokument" data-en="Document">Dokument</span>
+        </div>
+        <p data-de="Vollständiges Berufsprofil mit Projektreferenzen und Qualifikationsnachweisen."
+           data-en="Complete professional profile with project references and qualification certificates.">
+          Vollständiges Berufsprofil mit Projektreferenzen und Qualifikationsnachweisen.
+        </p>
+        <a href="#" class="btn btn--orange download__btn" aria-label="Detailprofil herunterladen"
+           data-de="⬇ Herunterladen" data-en="⬇ Download">⬇ Herunterladen</a>
+      </div>
+
+      <!-- Demowidth Badge -->
+      <div class="download__card" role="listitem">
+        <div class="download__card__header">
+          <h3 class="download__card__title" data-de="Ressourcen" data-en="Resources">Ressourcen</h3>
+          <span class="download__badge" data-de="Demoinhalt" data-en="Demo content">Demoinhalt</span>
+        </div>
+        <p data-de="Weitere Ressourcen wie Checklisten und Vorlagen folgen in Kürze."
+           data-en="More resources like checklists and templates coming soon.">
+          Weitere Ressourcen wie Checklisten und Vorlagen folgen in Kürze.
+        </p>
+        <a href="#contact" class="btn btn--orange download__btn"
+           data-de="Kontakt aufnehmen" data-en="Get in touch">Kontakt aufnehmen</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 7 — TERMINE
+══════════════════════════════════════════════════════════ -->
+<section id="termin" aria-labelledby="termin-heading">
+  <div class="termin__inner">
+    <span class="section-label" data-de="Terminbuchung" data-en="Booking">Terminbuchung</span>
+    <h2 id="termin-heading" data-de="Termin vereinbaren" data-en="Book an appointment">Termin vereinbaren</h2>
+    <p class="termin__intro"
+       data-de="30 Min. Erstgespräch – remote, auf Deutsch oder Englisch"
+       data-en="30-min. initial meeting – remote, in German or English">
+      30 Min. Erstgespräch – remote, auf Deutsch oder Englisch
+    </p>
+
+    <!-- Cal.com Embed Placeholder -->
+    <!-- TO ACTIVATE: Replace this block with your Cal.com embed script -->
+    <div class="cal-embed-placeholder" aria-label="Kalender-Einbettung">
+      <p><strong>Cal.com</strong></p>
+      <p data-de="Kalender-Einbettung wird hier erscheinen.<br>Ersetzen Sie diesen Block durch Ihren Cal.com Embed-Code."
+         data-en="Calendar embed will appear here.<br>Replace this block with your Cal.com embed code.">
+        Kalender-Einbettung wird hier erscheinen.<br>
+        Ersetzen Sie diesen Block durch Ihren Cal.com Embed-Code.
+      </p>
+    </div>
+    <!-- Cal.com Script Placeholder:
+    <script type="text/javascript">
+      (function (C, A, L) { ... })(window, document, "https://app.cal.com/embed/embed.js");
+    </script>
+    <cal-inline style="width:100%;height:600px;" calLink="YOUR_CAL_LINK"></cal-inline>
+    -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 8 — KONTAKT
+══════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact__grid">
+
+    <!-- Form -->
+    <div class="contact__form-side">
+      <span class="section-label" style="color:rgba(255,255,255,0.8)" data-de="Kontakt" data-en="Contact">Kontakt</span>
+      <h2 id="contact-heading" data-de="Schreiben Sie mir" data-en="Get in touch">Schreiben Sie mir</h2>
+
+      <!-- Replace PLACEHOLDER with your Formspree form ID -->
+      <form id="contact-form" class="contact-form"
+            action="https://formspree.io/f/PLACEHOLDER"
+            method="POST"
+            aria-label="Kontaktformular"
+            novalidate>
+
+        <input type="text"  name="name"
+               placeholder="Name"
+               data-de-placeholder="Name"
+               data-en-placeholder="Name"
+               required aria-label="Name" aria-required="true" />
+
+        <input type="email" name="email"
+               data-de-placeholder="E-Mail-Adresse"
+               data-en-placeholder="Email address"
+               placeholder="E-Mail-Adresse"
+               required aria-label="E-Mail" aria-required="true" />
+
+        <textarea name="message" rows="5"
+                  data-de-placeholder="Ihre Nachricht …"
+                  data-en-placeholder="Your message …"
+                  placeholder="Ihre Nachricht …"
+                  required aria-label="Nachricht" aria-required="true"></textarea>
+
+        <input type="hidden" name="_subject" value="Neue Anfrage — bscp.online" />
+        <input type="text"   name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+        <button type="submit" class="btn btn--primary"
+                data-de="Absenden" data-en="Send">Absenden</button>
+      </form>
+
+      <div id="form-success" class="form-success"
+           data-de="Vielen Dank! Ich melde mich in Kürze bei Ihnen."
+           data-en="Thank you! I will get back to you shortly.">
+        Vielen Dank! Ich melde mich in Kürze bei Ihnen.
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="contact__info-side">
+      <h3 data-de="Kontaktdaten" data-en="Contact details">Kontaktdaten</h3>
+      <ul class="contact__info-list">
+
+        <li>
+          <!-- Email icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6" style="fill:none;stroke:#ff8c00;stroke-width:2"/>
+          </svg>
+          <span><a href="mailto:info@bscp.online">info@bscp.online</a></span>
+        </li>
+
+        <li>
+          <!-- Globe icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12" style="stroke:#ff8c00;stroke-width:2"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" style="fill:none;stroke:#ff8c00;stroke-width:2"/>
+          </svg>
+          <span><a href="https://bscp.online">bscp.online</a></span>
+        </li>
+
+        <li>
+          <!-- Location icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3" style="fill:none;stroke:#ff8c00;stroke-width:2"/>
+          </svg>
+          <span data-de="Deutschland – Remote-first" data-en="Germany – Remote-first">Deutschland – Remote-first</span>
+        </li>
+
+        <li>
+          <!-- Calendar icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6" style="stroke:#ff8c00;stroke-width:2"/>
+            <line x1="8"  y1="2" x2="8"  y2="6" style="stroke:#ff8c00;stroke-width:2"/>
+            <line x1="3"  y1="10" x2="21" y2="10" style="stroke:#ff8c00;stroke-width:2"/>
+          </svg>
+          <span data-de="Verfügbar auf Tagesbasis" data-en="Available on a daily basis">Verfügbar auf Tagesbasis</span>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer>
+  <p>© <span id="footer-year"></span> Egor Becker Supply Chain &amp; Procurement —
+    <a href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a> —
+    <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
