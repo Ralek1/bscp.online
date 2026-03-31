@@ -121,17 +121,13 @@ section { padding: 80px 20px; }
 }
 
 .nav__brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.nav__logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  letter-spacing: 1px;
+.nav__logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
 }
-.nav__logo-sub {
-  font-family: var(--font-sans);
-  font-weight: 300;
-  font-size: 0.85rem;
-  color: var(--color-text);
+[data-theme="dark"] .nav__logo-img {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(5deg);
 }
 
 .nav__links {
