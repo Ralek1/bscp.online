@@ -40,6 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
       applyThemeIcons(next);
+
+      // Sync Cal.com theme — reload the embed with new theme
+      const calEl = document.getElementById('my-cal-inline-30min');
+      if (calEl && window.Cal && window.Cal.ns && window.Cal.ns['30min']) {
+        try {
+          window.Cal.ns['30min']('ui', { theme: next });
+        } catch(e) {}
+      }
     });
   });
 
