@@ -105,7 +105,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── 5. ROI CALCULATOR ─────────────────────────────────── */
+  /* ── 5. TIMELINE ACCORDION ────────────────────────────── */
+  document.querySelectorAll('.timeline__header').forEach(btn => {
+    const detail = btn.nextElementSibling;
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      if (expanded) {
+        detail.setAttribute('hidden', '');
+      } else {
+        detail.removeAttribute('hidden');
+      }
+    });
+  });
+
+
+  /* ── 6. ROI CALCULATOR ─────────────────────────────────── */
   const volumeSlider  = document.getElementById('roi-volume');
   const yearsSlider   = document.getElementById('roi-years');
   const volumeDisplay = document.getElementById('roi-volume-display');
@@ -153,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── 6. CONTACT FORM (Formspree) ───────────────────────── */
+  /* ── 7. CONTACT FORM (Formspree) ───────────────────────── */
   const form = document.getElementById('contact-form');
   const successMsg = document.getElementById('form-success');
 
