@@ -424,7 +424,10 @@ section { padding: 80px 20px; }
    ============================================================ */
 #about {
   background: var(--color-light);
-  padding: 80px 20px;
+  padding: 60px 20px 40px;
+}
+#career {
+  padding-top: 48px;
 }
 
 .about__grid {
@@ -444,27 +447,25 @@ section { padding: 80px 20px; }
 .about__right { display: flex; flex-direction: column; gap: 24px; }
 
 .about__photo-wrap {
-  width: 220px;
-  flex-shrink: 0;
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 24px rgba(255,140,0,0.20);
   border: 3px solid var(--color-primary);
-  align-self: flex-start;
-  margin: 0 auto;
 }
 .about__photo {
   width: 100%;
-  height: auto;
+  height: 260px;
   display: block;
   object-fit: cover;
   object-position: top center;
 }
 
-.about__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.about__right .stat-box { padding: 14px 10px; }
-.about__right .stat-box__value { font-size: 1.6rem; }
-.about__right .stat-box__label { font-size: 0.72rem; }
+.about__stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+
+@media (max-width: 639px) {
+  .about__stats { grid-template-columns: 1fr 1fr; }
+}
 
 .stat-box {
   background: var(--color-white);
@@ -874,7 +875,7 @@ section { padding: 80px 20px; }
   .nav__links { display: flex; }
   .nav__hamburger { display: none; }
 
-  .about__grid { grid-template-columns: 1fr 220px; align-items: start; gap: 48px; }
+  .about__grid { grid-template-columns: 3fr 2fr; align-items: start; gap: 48px; }
   .contact__grid { grid-template-columns: 3fr 2fr; }
   .skills__grid { grid-template-columns: repeat(4, 1fr); }
   .downloads__grid { grid-template-columns: repeat(3, 1fr); }
