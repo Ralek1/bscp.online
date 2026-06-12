@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audit & Qualität — BSCP.online</title>
+  <meta name="description" content="Lieferantenaudits, FAI, Reklamationsmanagement und Lieferantenbewertung nach ISO 9001 und ISO 13485 — für sicherheitskritische Industrien." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-hero { background: var(--color-navy); padding: 72px 20px; }
+    .page-hero__inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+    .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb span { margin: 0 8px; }
+    .page-hero__label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 16px; }
+    .page-hero__sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 640px; }
+    .hero__norms { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .hero__norm { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 14px; }
+
+    .services-section { padding: 72px 20px; background: var(--color-bg); }
+    .services-section:nth-child(even) { background: var(--color-light); }
+    .services-inner { max-width: 1000px; margin: 0 auto; }
+    .section-intro { max-width: 700px; margin-bottom: 40px; }
+    .section-intro p { color: var(--color-subtle); font-size: 0.97rem; line-height: 1.75; margin-top: 10px; }
+
+    .svc-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    @media(min-width:800px){ .svc-grid { grid-template-columns: 1fr 1fr; } }
+    .svc-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 12px; border-top: 4px solid var(--color-primary); }
+    .svc-card--full { grid-column: 1 / -1; }
+    .svc-card__icon { font-size: 1.8rem; }
+    .svc-card__title { font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-navy); }
+    .svc-card__value { font-weight: 700; color: var(--color-primary); font-size: 0.9rem; line-height: 1.55; }
+    .svc-card__desc { color: var(--color-text); font-size: 0.9rem; line-height: 1.75; flex: 1; }
+    .svc-card__list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .svc-card__list li { font-size: 0.85rem; color: var(--color-text); padding-left: 14px; position: relative; line-height: 1.5; }
+    .svc-card__list li::before { content: '→'; position: absolute; left: 0; color: var(--color-primary); font-weight: 700; }
+    .svc-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .svc-card__tag { background: var(--color-light); color: var(--color-navy); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; }
+
+    .industries { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
+    @media(min-width:640px){ .industries { grid-template-columns: repeat(3, 1fr); } }
+    @media(min-width:900px){ .industries { grid-template-columns: repeat(5, 1fr); } }
+    .industry { background: #fff; border-radius: 10px; padding: 16px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .industry__icon { font-size: 1.6rem; margin-bottom: 6px; }
+    .industry__name { font-size: 0.8rem; font-weight: 700; color: var(--color-navy); }
+
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-weight: 700; font-size: 0.88rem; text-decoration: none; margin-bottom: 36px; }
+    .back-link:hover { color: var(--color-dark); }
+    .cta-banner { background: var(--color-navy); padding: 64px 20px; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="../index.html#about"     class="nav__link">Über mich</a>
+  <a href="../index.html#career"    class="nav__link">Projekte</a>
+  <a href="index.html"              class="nav__link">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link">Downloads</a>
+  <a href="../index.html#termin"    class="nav__link">Termin</a>
+  <a href="../index.html#contact"   class="nav__link">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <button class="btn-lang js-lang-btn">DE | EN</button>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Audit & Qualität</p>
+    <p class="page-hero__label">✅ Audit & Qualität</p>
+    <h1 class="page-hero__title">Lieferantenqualität, die messbar ist</h1>
+    <p class="page-hero__sub">Lieferantenaudits, Erstmusterprüfungen und Reklamationsmanagement aus neun Jahren Erfahrung in sicherheitskritischen Industrien — von Kernkraft bis Medizintechnik.</p>
+    <div class="hero__norms">
+      <span class="hero__norm">ISO 9001</span>
+      <span class="hero__norm">ISO 13485</span>
+      <span class="hero__norm">FAI / Erstmuster</span>
+      <span class="hero__norm">Lieferantenaudit</span>
+      <span class="hero__norm">Reklamationsmanagement</span>
+    </div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← Alle Leistungen</a>
+    <div class="section-intro">
+      <span class="section-label">Audit & Qualität</span>
+      <h2>Lieferantenrisiken erkennen, bevor sie zum Problem werden</h2>
+      <p>Qualitätsprobleme in der Lieferkette kosten mehr als Geld — sie kosten Zeit, Vertrauen und im Worst Case die Zulassung. Diese Leistungen schaffen die Transparenz, die Sie brauchen, um fundiert zu entscheiden.</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <div class="svc-card">
+        <span class="svc-card__icon">🔎</span>
+        <h3 class="svc-card__title">Lieferantenaudit</h3>
+        <p class="svc-card__value">Systematische Beurteilung eines Lieferanten nach definierten Qualitätskriterien — remote oder vor Ort. Mit strukturiertem Auditbericht und konkreten Maßnahmenempfehlungen.</p>
+        <p class="svc-card__desc">Ob Qualifizierungsaudit vor der Erstbeauftragung, Überwachungsaudit bei laufender Zusammenarbeit oder Requalifizierung nach einem Qualitätsproblem — ein professionell durchgeführtes Audit schützt Sie vor teuren Überraschungen und stärkt die Lieferantenbeziehung durch Transparenz.</p>
+        <ul class="svc-card__list">
+          <li>Vorbereitung: Anforderungsprofil, Fragenkatalog, Terminkoordination</li>
+          <li>Durchführung remote (Videoaudit) oder vor Ort beim Lieferanten</li>
+          <li>Bewertung nach Prozess-, System- oder Produktkriterien</li>
+          <li>Auditbericht inkl. Abweichungen, Bewertung und Maßnahmenliste</li>
+          <li>Nachverfolgung offener Punkte auf Wunsch</li>
+        </ul>
+        <div class="svc-card__tags">
+          <span class="svc-card__tag">Remote & vor Ort</span>
+          <span class="svc-card__tag">ISO 9001</span>
+          <span class="svc-card__tag">Auditbericht</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-card__icon">📋</span>
+        <h3 class="svc-card__title">FAI — Erstmusterprüfung</h3>
+        <p class="svc-card__value">Strukturierte Erstmusterprüfung für neue Bauteile und Lieferanten — nach branchenüblichem Standard, mit vollständiger Dokumentation und Freigabeempfehlung.</p>
+        <p class="svc-card__desc">Die Erstmusterprüfung ist der kritische Schritt vor der Serienfreigabe. Fehler hier sind günstig — Fehler in der Serie sind teuer. Eine professionell durchgeführte FAI schützt Ihre Prozesse, gibt Ihrem Team Sicherheit und liefert die Dokumentation, die Kunden und Zertifizierer einfordern.</p>
+        <ul class="svc-card__list">
+          <li>Prüfplan erstellen und mit Lieferant abstimmen</li>
+          <li>Auswertung der Messprotokolle und Prüfergebnisse</li>
+          <li>Bewertung nach Zeichnungs- und Spezifikationsanforderungen</li>
+          <li>FAI-Bericht mit Freigabeempfehlung oder Nachbesserungsbedarf</li>
+          <li>Abstimmung mit Lieferant bei Abweichungen</li>
+        </ul>
+        <div class="svc-card__tags">
+          <span class="svc-card__tag">Erstmuster</span>
+          <span class="svc-card__tag">Serienfreigabe</span>
+          <span class="svc-card__tag">Dokumentation</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-card__icon">⚠️</span>
+        <h3 class="svc-card__title">Reklamationsmanagement</h3>
+        <p class="svc-card__value">Strukturierte Bearbeitung von Lieferantenreklamationen — von der Erstmeldung bis zur nachhaltigen Abstellung. Klar, nachvollziehbar, dokumentiert.</p>
+        <p class="svc-card__desc">Eine Reklamation ist unangenehm — aber auch eine Chance. Wer sie strukturiert bearbeitet, gewinnt Erkenntnisse über Lieferantenrisiken und verhindert Wiederholungen. Das Reklamationsmanagement übernimmt die gesamte Prozesskette: Erfassung, 8D-Bearbeitung, Wirksamkeitsprüfung und Abschluss.</p>
+        <ul class="svc-card__list">
+          <li>Erfassung und Beschreibung des Qualitätsmangels</li>
+          <li>Einleitung von Sofortmaßnahmen beim Lieferanten</li>
+          <li>8D-Report-Begleitung und Überprüfung der Ursachenanalyse</li>
+          <li>Wirksamkeitsprüfung der Abstellmaßnahmen</li>
+          <li>Abschluss und Dokumentation im Qualitätsmanagementsystem</li>
+        </ul>
+        <div class="svc-card__tags">
+          <span class="svc-card__tag">8D-Report</span>
+          <span class="svc-card__tag">Ursachenanalyse</span>
+          <span class="svc-card__tag">Abstellung</span>
+        </div>
+      </div>
+
+      <div class="svc-card">
+        <span class="svc-card__icon">📊</span>
+        <h3 class="svc-card__title">Lieferantenbewertung & Entwicklung</h3>
+        <p class="svc-card__value">Transparentes Scoring-Modell nach Qualität, Preis, Liefertreue und Risiko — als Grundlage für aktive Lieferantensteuerung statt passiver Verwaltung.</p>
+        <p class="svc-card__desc">Welche Lieferanten performen wirklich gut? Welche sind ein verstecktes Risiko? Ein strukturiertes Bewertungsmodell macht diese Fragen beantwortbar und gibt Ihnen die Basis, um Lieferanten gezielt zu entwickeln, zu halten oder abzulösen.</p>
+        <ul class="svc-card__list">
+          <li>Entwicklung eines gewichteten Scoring-Modells nach Ihren Kriterien</li>
+          <li>Bewertung nach Qualität, Preis, Liefertreue, Kommunikation und Risiko</li>
+          <li>Lieferanten-Matrix als Entscheidungsgrundlage</li>
+          <li>Ableitung von Entwicklungsmaßnahmen je Lieferant</li>
+          <li>Übergabe als Excel-Modell — dauerhaft nutzbar</li>
+        </ul>
+        <div class="svc-card__tags">
+          <span class="svc-card__tag">Scoring-Modell</span>
+          <span class="svc-card__tag">Lieferantenentwicklung</span>
+          <span class="svc-card__tag">Excel</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Branchen -->
+<section class="services-section">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Branchenerfahrung</span>
+      <h2>Qualitätssicherung in sicherheitskritischen Industrien</h2>
+      <p>Neun Jahre Erfahrung mit Lieferanten und Qualitätsprozessen in Branchen, in denen Fehler keine Option sind.</p>
+    </div>
+    <div class="industries">
+      <div class="industry"><div class="industry__icon">⚛️</div><p class="industry__name">Kernenergie</p></div>
+      <div class="industry"><div class="industry__icon">💧</div><p class="industry__name">Wasserstoff / H₂</p></div>
+      <div class="industry"><div class="industry__icon">🏥</div><p class="industry__name">Medizintechnik</p></div>
+      <div class="industry"><div class="industry__icon">⚙️</div><p class="industry__name">Maschinenbau</p></div>
+      <div class="industry"><div class="industry__icon">⚡</div><p class="industry__name">Elektrotechnik</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Lieferantenqualität auf dem Prüfstand?</h2>
+    <p>Schildern Sie mir die Situation — gemeinsam finden wir heraus, welche Maßnahme die größte Wirkung hat.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — BSCP</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Leistungen</h4>
+      <ul class="footer__list">
+        <li><a href="einkauf.html">Einkauf & Beschaffung</a></li>
+        <li><a href="audit.html">Audit & Qualität</a></li>
+        <li><a href="messe-service.html">Messe-Service</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outreach — BSCP.online</title>
+  <meta name="description" content="Professioneller Lieferanten-Outreach — personalisierte E-Mail-Kampagnen und strukturiertes Follow-up-Management." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-hero { background: var(--color-navy); padding: 72px 20px; }
+    .page-hero__inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-bottom: 18px; }
+    .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb span { margin: 0 8px; }
+    .page-hero__label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 16px; }
+    .page-hero__sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 600px; }
+    .services-section { padding: 80px 20px; background: var(--color-bg); }
+    .services-inner { max-width: 900px; margin: 0 auto; }
+    .svc { background: #fff; border-radius: 16px; padding: 40px; margin-bottom: 36px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); border-left: 5px solid var(--color-primary); }
+    .svc__code { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-subtle); margin-bottom: 10px; }
+    .svc__title { font-family: var(--font-serif); font-size: 1.7rem; color: var(--color-navy); margin-bottom: 18px; }
+    .svc__value { background: var(--color-light); border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; font-weight: 700; color: var(--color-navy); font-size: 1rem; border-left: 3px solid var(--color-primary); }
+    .svc__desc { color: var(--color-text); line-height: 1.8; margin-bottom: 24px; font-size: 0.97rem; }
+    .svc__list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
+    .svc__list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--color-text); }
+    .svc__list li::before { content: '→'; color: var(--color-primary); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .svc__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-weight: 700; font-size: 0.88rem; text-decoration: none; margin-bottom: 36px; }
+    .back-link:hover { color: var(--color-dark); }
+    .cta-banner { background: var(--color-navy); padding: 64px 20px; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="../index.html#about" class="nav__link">Über mich</a>
+  <a href="../index.html#career" class="nav__link">Projekte</a>
+  <a href="index.html" class="nav__link">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link">Downloads</a>
+  <a href="../index.html#termin" class="nav__link">Termin</a>
+  <a href="../index.html#contact" class="nav__link">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <button class="btn-lang js-lang-btn">DE | EN</button>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Outreach</p>
+    <p class="page-hero__label">✉️ Outreach</p>
+    <h1 class="page-hero__title">Erstkontakte, die Lieferanten ernst nehmen</h1>
+    <p class="page-hero__sub">Generische Massenanfragen werden ignoriert. Personalisierte, professionelle Ansprache öffnet Türen — und strukturiertes Follow-up sorgt dafür, dass sie offen bleiben.</p>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← Alle Leistungen</a>
+
+    <!-- EL-003 -->
+    <div class="svc">
+      <p class="svc__code">EL-003 · Outreach</p>
+      <h2 class="svc__title">E-Mail-Outreach Kampagne</h2>
+      <div class="svc__value">Bis zu 30 personalisierte Erstkontakt-E-Mails an qualifizierte Lieferanten — inkl. Tracking der Öffnungs- und Antwortraten.</div>
+      <p class="svc__desc">Der erste Eindruck entscheidet. Lieferanten erhalten täglich Dutzende Standardanfragen — personalisierte, fachkundige Ansprache fällt auf und erzeugt echtes Interesse. Jede E-Mail wird individuell auf den Lieferanten, seine Produkte und Ihren konkreten Bedarf zugeschnitten. Das Ergebnis: deutlich höhere Rückmeldequoten als mit Standardvorlagen.</p>
+      <ul class="svc__list">
+        <li>Analyse Ihrer Anforderungen und Erstellung eines Outreach-Briefings</li>
+        <li>Individuelle Texterstellung für bis zu 30 Lieferantenanschreiben</li>
+        <li>Versand und Tracking (Öffnungsrate, Antwortstatus)</li>
+        <li>Kategorisierung aller Rückmeldungen (interessiert / offen / kein Interesse)</li>
+        <li>Übergabe mit Ergebnis-Übersicht und Empfehlung für nächste Schritte</li>
+      </ul>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+    <!-- EL-004 -->
+    <div class="svc">
+      <p class="svc__code">EL-004 · Outreach</p>
+      <h2 class="svc__title">Follow-up Management</h2>
+      <div class="svc__value">Kein Lieferantenkontakt bleibt unbearbeitet — strukturiertes Nachfassen, Antworten kategorisieren und eine saubere Shortlist als Ergebnis.</div>
+      <p class="svc__desc">Die meisten Anfragen scheitern nicht am Erstkontakt, sondern daran, dass niemand nachfasst. Lieferanten sind beschäftigt — wer strukturiert nachfragt, wird priorisiert. Das Follow-up Management übernimmt genau das: Alle offenen Kontakte werden nachgefasst, Antworten kategorisiert und eine priorisierte Shortlist erstellt, mit der Sie direkt in die Angebotsphase gehen können.</p>
+      <ul class="svc__list">
+        <li>Nachfass-E-Mails für alle bisher nicht antwortenden Lieferanten</li>
+        <li>Strukturierte Kategorisierung aller Rückmeldungen</li>
+        <li>Erstellung einer priorisierten Shortlist (Top-Lieferanten für nächste Schritte)</li>
+        <li>Kurzbewertung jedes Lieferanten basierend auf Reaktion und Informationsqualität</li>
+        <li>Empfehlung: Welche Lieferanten verdienen ein Gespräch?</li>
+      </ul>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Lieferanten anschreiben, die antworten</h2>
+    <p>Sagen Sie mir, wen Sie suchen — ich kümmere mich um die Ansprache.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — BSCP</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Leistungen</h4>
+      <ul class="footer__list">
+        <li><a href="pakete.html">Pakete</a></li>
+        <li><a href="outreach.html">Outreach</a></li>
+        <li><a href="analyse.html">Analyse</a></li>
+        <li><a href="messe-service.html">Messe-Service</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+</body>
+</html>

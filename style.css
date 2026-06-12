@@ -8,13 +8,16 @@
 
 /* --- CSS Variables --- */
 :root {
-  --color-primary:  #ff8c00;
-  --color-dark:     #cc7000;
-  --color-light:    #fff3e0;
-  --color-warm:     #ffeb82;
+  --color-primary:  #FF8C00;
+  --color-dark:     #d47800;
+  --color-navy:     #1E3A5F;
+  --color-navy-deep:#162d4a;
+  --color-light:    #EEF2F7;
+  --color-warm:     #FFF0D6;
   --color-text:     #1a1a1a;
   --color-subtle:   #666666;
   --color-white:    #ffffff;
+  --color-bg:       #FAFAF7;
 
   --font-serif: 'Alice', serif;
   --font-sans:  'Lato', sans-serif;
@@ -58,7 +61,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background: var(--color-white);
+  background: var(--color-bg);
   line-height: 1.65;
   overflow-x: hidden;
 }
@@ -122,12 +125,9 @@ section { padding: 80px 20px; }
 
 .nav__brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav__logo-img {
-  height: 38px;
+  height: 52px;
   width: auto;
   display: block;
-}
-[data-theme="dark"] .nav__logo-img {
-  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(5deg);
 }
 
 .nav__links {
@@ -203,7 +203,7 @@ section { padding: 80px 20px; }
 .nav__overlay {
   position: fixed;
   inset: 0;
-  background: var(--color-primary);
+  background: var(--color-navy);
   z-index: 1050;
   display: flex;
   flex-direction: column;
@@ -306,12 +306,11 @@ section { padding: 80px 20px; }
    SECTION 1 — HERO
    ============================================================ */
 #hero {
-  min-height: 100vh;
-  background: var(--color-primary);
+  background: var(--color-navy);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px;
+  padding: 80px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -319,6 +318,8 @@ section { padding: 80px 20px; }
 .hero__bg-pattern {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0.08;
   pointer-events: none;
 }
@@ -495,7 +496,7 @@ section { padding: 80px 20px; }
    SECTION 3 — BERUFSERFAHRUNG
    ============================================================ */
 #career {
-  background: #fff3e0;
+  background: var(--color-light);
   padding: 80px 20px;
 }
 [data-theme="dark"] #career { background: #232323; }
@@ -609,7 +610,7 @@ section { padding: 80px 20px; }
    SECTION 4 — ROI RECHNER
    ============================================================ */
 #roi {
-  background: var(--color-primary);
+  background: var(--color-navy);
   padding: 80px 20px;
 }
 
@@ -778,7 +779,7 @@ section { padding: 80px 20px; }
    SECTION 8 — KONTAKT
    ============================================================ */
 #contact {
-  background: var(--color-primary);
+  background: var(--color-navy);
   padding: 80px 20px;
 }
 
@@ -839,9 +840,10 @@ section { padding: 80px 20px; }
    FOOTER
    ============================================================ */
 .footer {
-  background: #111;
-  color: #bbb;
+  background: var(--color-bg);
+  color: var(--color-subtle);
   font-size: 0.88rem;
+  border-top: 2px solid var(--color-navy);
 }
 
 .footer__grid {
@@ -853,14 +855,13 @@ section { padding: 80px 20px; }
 }
 
 .footer__logo {
-  height: 44px;
+  height: 72px;
   width: auto;
-  filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg);
   margin-bottom: 14px;
   display: block;
 }
 .footer__tagline {
-  color: #888;
+  color: var(--color-subtle);
   font-size: 0.82rem;
   line-height: 1.5;
   max-width: 220px;
@@ -882,16 +883,16 @@ section { padding: 80px 20px; }
   flex-direction: column;
   gap: 8px;
 }
-.footer__list li { color: #aaa; }
-.footer__list a { color: #aaa; transition: color var(--transition); }
+.footer__list li { color: var(--color-subtle); }
+.footer__list a { color: var(--color-subtle); transition: color var(--transition); }
 .footer__list a:hover { color: var(--color-primary); }
 
 .footer__bottom {
-  border-top: 1px solid #222;
+  border-top: 1px solid #ddd;
   padding: 18px 20px;
   text-align: center;
   font-size: 0.8rem;
-  color: #666;
+  color: var(--color-subtle);
 }
 
 @media (min-width: 640px) {

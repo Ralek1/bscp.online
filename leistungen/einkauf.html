@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Einkauf & Beschaffung — BSCP.online</title>
+  <meta name="description" content="Professioneller Einkauf & Beschaffung — Pakete, Recherche, Outreach, Analyse, Verhandlung, Prozesse und KI-Automatisierung." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-hero { background: var(--color-navy); padding: 72px 20px; }
+    .page-hero__inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+    .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb span { margin: 0 8px; }
+    .page-hero__label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 16px; }
+    .page-hero__sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 640px; }
+
+    /* Jump nav */
+    .jump-nav { background: #fff; border-bottom: 1px solid #eee; padding: 0 20px; position: sticky; top: 64px; z-index: 100; overflow-x: auto; }
+    .jump-nav__inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 0; }
+    .jump-nav__link { display: inline-block; padding: 14px 18px; font-size: 0.82rem; font-weight: 700; color: var(--color-subtle); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+    .jump-nav__link:hover { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+
+    .services-section { padding: 72px 20px; background: var(--color-bg); }
+    .services-section:nth-child(even) { background: var(--color-light); }
+    .services-inner { max-width: 1000px; margin: 0 auto; }
+    .section-intro { max-width: 680px; margin-bottom: 40px; }
+    .section-intro p { color: var(--color-subtle); font-size: 0.97rem; line-height: 1.75; margin-top: 10px; }
+
+    /* Pakete as cards grid */
+    .pakete-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    @media(min-width:800px){ .pakete-grid { grid-template-columns: repeat(3,1fr); } }
+    .paket-card { background: #fff; border-radius: 14px; padding: 32px 28px; box-shadow: 0 2px 14px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 14px; border-top: 4px solid var(--color-primary); }
+    .paket-card__code { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-subtle); }
+    .paket-card__title { font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-navy); }
+    .paket-card__value { font-size: 0.88rem; font-weight: 700; color: var(--color-primary); line-height: 1.5; }
+    .paket-card__list { list-style: none; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+    .paket-card__list li { font-size: 0.85rem; color: var(--color-text); padding-left: 14px; position: relative; line-height: 1.5; }
+    .paket-card__list li::before { content: '→'; position: absolute; left: 0; color: var(--color-primary); font-weight: 700; }
+    .paket-card__cta { margin-top: auto; }
+
+    /* Single service rows */
+    .svc-list { display: flex; flex-direction: column; gap: 24px; }
+    .svc { background: #fff; border-radius: 14px; padding: 32px 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); border-left: 4px solid var(--color-primary); }
+    .svc__code { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-subtle); margin-bottom: 8px; }
+    .svc__title { font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-navy); margin-bottom: 12px; }
+    .svc__value { font-weight: 700; color: var(--color-primary); font-size: 0.93rem; margin-bottom: 12px; line-height: 1.5; }
+    .svc__desc { color: var(--color-text); font-size: 0.93rem; line-height: 1.75; margin-bottom: 16px; }
+    .svc__tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .svc__tag { background: var(--color-light); color: var(--color-navy); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; }
+    @media(min-width:800px){
+      .svc { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 40px; align-items: start; }
+      .svc__code, .svc__title { grid-column: 1 / -1; margin-bottom: 0; }
+    }
+
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-weight: 700; font-size: 0.88rem; text-decoration: none; margin-bottom: 36px; }
+    .back-link:hover { color: var(--color-dark); }
+    .cta-banner { background: var(--color-navy); padding: 64px 20px; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="../index.html#about"     class="nav__link">Über mich</a>
+  <a href="../index.html#career"    class="nav__link">Projekte</a>
+  <a href="index.html"              class="nav__link">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link">Downloads</a>
+  <a href="../index.html#termin"    class="nav__link">Termin</a>
+  <a href="../index.html#contact"   class="nav__link">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <button class="btn-lang js-lang-btn">DE | EN</button>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Einkauf & Beschaffung</p>
+    <p class="page-hero__label">🛒 Einkauf & Beschaffung</p>
+    <h1 class="page-hero__title">Vom ersten Lieferantenkontakt bis zum laufenden Einkaufs-Setup</h1>
+    <p class="page-hero__sub">Recherche, Outreach, Verhandlung, Analyse, Prozesse und KI-Automatisierung — einzeln buchbar oder als Komplettpaket. Remote-first, ergebnisorientiert.</p>
+  </div>
+</div>
+
+<div class="jump-nav">
+  <div class="jump-nav__inner">
+    <a href="#pakete"     class="jump-nav__link">Pakete</a>
+    <a href="#recherche"  class="jump-nav__link">Recherche & Outreach</a>
+    <a href="#analyse"    class="jump-nav__link">Analyse</a>
+    <a href="#verhandlung" class="jump-nav__link">Verhandlung</a>
+    <a href="#prozesse"   class="jump-nav__link">Prozesse & KI</a>
+    <a href="#beratung"   class="jump-nav__link">Beratung</a>
+  </div>
+</div>
+
+<!-- PAKETE -->
+<section class="services-section" id="pakete">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← Alle Leistungen</a>
+    <div class="section-intro">
+      <span class="section-label">Pakete</span>
+      <h2>Komplettlösungen mit klarem Ergebnis</h2>
+      <p>Kein Stundendschungel, kein offenes Ende. Diese Pakete liefern definierte Ergebnisse in definierter Zeit — ideal für einen schnellen Einstieg oder den dauerhaften Einkaufspartner.</p>
+    </div>
+    <div class="pakete-grid">
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-001 · Einstiegspaket</p>
+        <h3 class="paket-card__title">KI-Einkauf Sprint</h3>
+        <p class="paket-card__value">In einer Woche einsatzbereite Lieferantenoptionen — recherchiert, angeschrieben, dokumentiert.</p>
+        <ul class="paket-card__list">
+          <li>Globale Lieferantenrecherche (bis 20 Kontakte)</li>
+          <li>KI-gestützte Outreach-Kampagne</li>
+          <li>Strukturierte Excel-Übergabe</li>
+          <li>Laufzeit: 1 Woche, remote</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Anfragen</a></div>
+      </div>
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-002 · Wachstumspaket</p>
+        <h3 class="paket-card__title">Einkauf & Lieferanten – Full Setup</h3>
+        <p class="paket-card__value">Nach drei Wochen steht Ihre Einkaufsinfrastruktur — dokumentiert, erprobt, übergabefähig.</p>
+        <ul class="paket-card__list">
+          <li>Sprint (Woche 1) + Prozess-Dokumentation</li>
+          <li>2 Wochen Follow-up-Begleitung</li>
+          <li>Abschlussbericht & Handlungsempfehlung</li>
+          <li>Empfohlen für Start-ups & KMU</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Anfragen</a></div>
+      </div>
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-003 · Premium Retainer</p>
+        <h3 class="paket-card__title">Monatlicher Einkaufs-Support</h3>
+        <p class="paket-card__value">Professioneller Einkauf ohne Festanstellung — flexibel, planbar, auf Ergebnis ausgerichtet.</p>
+        <ul class="paket-card__list">
+          <li>Laufende Recherche & Verhandlung</li>
+          <li>Monatliches Reporting</li>
+          <li>Direkte Erreichbarkeit</li>
+          <li>Mind. 3 Monate, dann monatlich kündbar</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Anfragen</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECHERCHE & OUTREACH -->
+<section class="services-section" id="recherche">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Recherche & Outreach</span>
+      <h2>Die richtigen Lieferanten finden und ansprechen</h2>
+      <p>Qualifizierte Lieferantenkontakte weltweit — recherchiert, bewertet und professionell angesprochen. Kein Massenversand, keine unqualifizierten Kontakte.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-001</p>
+        <h3 class="svc__title">Lieferantenrecherche (global)</h3>
+        <p class="svc__value">Bis zu 20 qualifizierte Lieferanten — inkl. Kontaktdaten, Kurzbewertung und Excel-Übergabe.</p>
+        <p class="svc__desc">Globale Recherche in Unternehmensverzeichnissen, B2B-Plattformen und Branchen-Datenbanken. Jeder Kontakt wird vorbewertet: Zertifizierungen, Kapazität, Marktpräsenz. Ergebnis sofort nutzbar.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Global</span><span class="svc__tag">Excel-Übergabe</span><span class="svc__tag">Bewertet</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-002</p>
+        <h3 class="svc__title">Marktrecherche & Benchmarking</h3>
+        <p class="svc__value">Wissen Sie, ob Ihre Einkaufspreise marktgerecht sind? Diese Analyse schafft Klarheit und Verhandlungsbasis.</p>
+        <p class="svc__desc">Preisvergleich für eine Warengruppe über mind. 5 Marktanbieter. Bewertung bestehender Lieferanten im Marktvergleich. Klare Empfehlung: Neu verhandeln, wechseln oder bestätigen.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Preisvergleich</span><span class="svc__tag">Benchmarking</span><span class="svc__tag">Handlungsempfehlung</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-003</p>
+        <h3 class="svc__title">E-Mail-Outreach Kampagne</h3>
+        <p class="svc__value">Bis zu 30 personalisierte Erstkontakte — inkl. Tracking. Deutlich höhere Rückmeldequote als Standardanfragen.</p>
+        <p class="svc__desc">Jede E-Mail wird individuell auf den Lieferanten, seine Produkte und Ihren konkreten Bedarf zugeschnitten. Versand, Tracking und Übergabe mit Ergebnis-Übersicht und Empfehlung für nächste Schritte.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Personalisiert</span><span class="svc__tag">Tracking</span><span class="svc__tag">Bis 30 Kontakte</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-004</p>
+        <h3 class="svc__title">Follow-up Management</h3>
+        <p class="svc__value">Kein Kontakt geht verloren — strukturiertes Nachfassen, Antworten kategorisieren, Shortlist erstellen.</p>
+        <p class="svc__desc">Nachfass-E-Mails für alle offenen Kontakte, Kategorisierung aller Rückmeldungen, priorisierte Shortlist der vielversprechendsten Lieferanten als direkte Grundlage für die Angebotsphase.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Nachfassen</span><span class="svc__tag">Kategorisierung</span><span class="svc__tag">Shortlist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYSE -->
+<section class="services-section" id="analyse">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Analyse</span>
+      <h2>Datenbasierte Entscheidungen statt Bauchgefühl</h2>
+      <p>Spend-Analysen decken verstecktes Einsparpotenzial auf. Lieferantenbewertungen schaffen eine objektive Basis für strategische Entscheidungen.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-005</p>
+        <h3 class="svc__title">Spend-Analyse</h3>
+        <p class="svc__value">Wofür geben Sie wie viel aus — und warum? Diese Analyse macht Ihre Einkaufsausgaben transparent und zeigt, wo Einsparpotenzial schlummert.</p>
+        <p class="svc__desc">Auswertung nach Kategorie, Lieferant und Zeitraum. Pareto-Analyse, Konsolidierungspotenziale, Maverick-Buying. Klare Handlungsempfehlungen mit priorisierten Einsparpotenzialen. Datenbasis liefert der Kunde.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Pareto-Analyse</span><span class="svc__tag">Konsolidierung</span><span class="svc__tag">Einsparpotenzial</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-006</p>
+        <h3 class="svc__title">Lieferantenbewertung</h3>
+        <p class="svc__value">Ein transparentes Scoring-Modell nach Qualität, Preis, Zuverlässigkeit und Risiko — als Excel-Modell übergeben, dauerhaft nutzbar.</p>
+        <p class="svc__desc">Gewichtetes Scoring-Modell, zugeschnitten auf Ihre Kriterien. Lieferanten-Matrix mit Ableitung: Entwickeln, halten, ablösen oder absichern. Übergabe als aktualisierbare Excel-Datei.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Scoring-Modell</span><span class="svc__tag">Lieferanten-Matrix</span><span class="svc__tag">Excel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERHANDLUNG -->
+<section class="services-section" id="verhandlung">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Verhandlung</span>
+      <h2>Bessere Konditionen durch bessere Vorbereitung</h2>
+      <p>80 % des Verhandlungsergebnisses entscheiden sich vor dem ersten Gespräch. Professionelle Vorbereitung und erfahrene Gesprächsführung machen den Unterschied.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-007</p>
+        <h3 class="svc__title">Verhandlungsvorbereitung</h3>
+        <p class="svc__value">Strategie, Zieldefinition, BATNA und Argumentationsleitfaden — damit Sie selbstsicher in jedes Lieferantengespräch gehen.</p>
+        <p class="svc__desc">Analyse der Markt- und Lieferantensituation, Definition von Ziel-, Ausstiegs- und Kompromissposition, vorbereitete Argumente für typische Einwände. Übergabe als kompaktes Verhandlungs-Briefing.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Strategie</span><span class="svc__tag">BATNA</span><span class="svc__tag">Briefing</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-008</p>
+        <h3 class="svc__title">Verhandlungsführung (remote)</h3>
+        <p class="svc__value">Ich führe das Lieferantengespräch für Sie — als neutraler Profi auf Augenhöhe. Max. 90 Minuten pro Termin, remote via Video-Call.</p>
+        <p class="svc__desc">Übernahme der Gesprächsleitung oder aktive Unterstützung während des Calls. Strukturierte Führung nach bewährter Methodik, Live-Protokoll, Nachbriefing mit Ergebnis und nächsten Schritten.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Remote</span><span class="svc__tag">Gesprächsleitung</span><span class="svc__tag">Nachbriefing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROZESSE & KI -->
+<section class="services-section" id="prozesse">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Prozesse & KI</span>
+      <h2>Smarte Prozesse. Mehr Zeit für das Wesentliche.</h2>
+      <p>Dokumentierte Prozesse ermöglichen Wachstum. KI-Automatisierungen nehmen Routineaufgaben ab. Eine strukturierte Lieferantendatenbank sichert Ihr Wissen dauerhaft.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-009</p>
+        <h3 class="svc__title">Prozess-Dokumentation Einkauf</h3>
+        <p class="svc__value">Ihre Einkaufsprozesse — klar beschrieben, für alle nachvollziehbar. Grundlage für Delegation, Skalierung und Qualitätssicherung.</p>
+        <p class="svc__desc">Ist-Analyse, Ablaufdiagramme, Identifikation von Schwachstellen und Lücken. Praxistaugliche Dokumentation mit Verbesserungsempfehlung nach Aufwand/Nutzen priorisiert.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Ist-Analyse</span><span class="svc__tag">Ablaufdiagramm</span><span class="svc__tag">Optimierung</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-010</p>
+        <h3 class="svc__title">KI-Automatisierung Einkauf</h3>
+        <p class="svc__value">Automatisierte Workflows für Recherche, Outreach und Tracking — individuell gebaut, direkt in Ihren Arbeitsalltag integriert.</p>
+        <p class="svc__desc">Analyse Ihrer Routine-Tasks, Aufbau maßgeschneiderter Automatisierungen, Integration in bestehende Tools (Excel, Google Sheets, E-Mail). Übergabe inkl. Dokumentation und Teameinweisung.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">KI-Workflows</span><span class="svc__tag">Automatisierung</span><span class="svc__tag">Excel/Sheets</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-011</p>
+        <h3 class="svc__title">Lieferantendatenbank aufbauen</h3>
+        <p class="svc__value">Alle Lieferantendaten an einem Ort — strukturiert, durchsuchbar, auswertbar. Einmal aufgebaut, dauerhaft nutzbar.</p>
+        <p class="svc__desc">Datenbankstruktur nach Warengruppen, Kategorisierung nach Produkt, Region, Zertifizierungen und Bewertung. Übernahme vorhandener Daten, Übergabe als Excel oder Google Sheet.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Strukturiert</span><span class="svc__tag">Kategorisiert</span><span class="svc__tag">Excel/Sheets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BERATUNG -->
+<section class="services-section" id="beratung">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Beratung</span>
+      <h2>Expertenwissen — genau dann, wenn Sie es brauchen</h2>
+      <p>Kein langer Projektvorlauf. Flexible Beratungsstunden für konkrete Fragen, Workshops und technische Umsetzungen. Mindestbuchung 2 Stunden, vollständig remote.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">ST-001</p>
+        <h3 class="svc__title">Beratung & Consulting</h3>
+        <p class="svc__value">Direkte Antworten auf Ihre Einkaufsfragen — für Workshops, Ad-hoc-Unterstützung und strategisches Sparring.</p>
+        <p class="svc__desc">Einsatzgebiete: Einkaufsmethodik, Verhandlungstraining, Prozessoptimierung, Lieferantenentscheidungen, Markteinschätzungen. Vorbereitung auf Basis Ihrer Unterlagen, Kurzzusammenfassung nach dem Gespräch.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Workshop</span><span class="svc__tag">Ad-hoc</span><span class="svc__tag">Sparring</span><span class="svc__tag">Mind. 2h</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">ST-002</p>
+        <h3 class="svc__title">Technische Umsetzung (KI & Excel)</h3>
+        <p class="svc__value">Automatisierungen, Skripte und Dashboards — maßgeschneidert für Ihren Einkaufsalltag. Schnell, praxistauglich, mit Übergabe und Einweisung.</p>
+        <p class="svc__desc">Spend-Analysen, Bewertungstools, Reporting-Templates, KI-Workflows, Tracking-Dashboards. Übergabe inkl. kurzer Einweisung und Dokumentation. Mindestbuchung 2 Stunden.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Excel</span><span class="svc__tag">KI-Automatisierung</span><span class="svc__tag">Dashboard</span><span class="svc__tag">Mind. 2h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Bereit für den nächsten Schritt?</h2>
+    <p>Sagen Sie mir, wo Sie stehen — ich zeige Ihnen, was in Ihrer Situation am meisten bringt.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — BSCP</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Leistungen</h4>
+      <ul class="footer__list">
+        <li><a href="einkauf.html">Einkauf & Beschaffung</a></li>
+        <li><a href="audit.html">Audit & Qualität</a></li>
+        <li><a href="messe-service.html">Messe-Service</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+</body>
+</html>

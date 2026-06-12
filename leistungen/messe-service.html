@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Messe-Service — BSCP.online</title>
+  <meta name="description" content="Professioneller Messebesuch im Auftrag Ihres Unternehmens — Lieferantenkontakte sammeln, nachbearbeiten und qualifizieren." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-hero { background: var(--color-navy); padding: 72px 20px; }
+    .page-hero__inner { max-width: 800px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.55); margin-bottom: 18px; }
+    .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb span { margin: 0 8px; }
+    .page-hero__label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 16px; }
+    .page-hero__sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 600px; }
+    .services-section { padding: 80px 20px; background: var(--color-bg); }
+    .services-inner { max-width: 900px; margin: 0 auto; }
+    .svc { background: #fff; border-radius: 16px; padding: 40px; margin-bottom: 36px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); border-left: 5px solid var(--color-primary); }
+    .svc__code { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-subtle); margin-bottom: 10px; }
+    .svc__title { font-family: var(--font-serif); font-size: 1.7rem; color: var(--color-navy); margin-bottom: 18px; }
+    .svc__value { background: var(--color-light); border-radius: 8px; padding: 14px 18px; margin-bottom: 20px; font-weight: 700; color: var(--color-navy); font-size: 1rem; border-left: 3px solid var(--color-primary); }
+    .svc__desc { color: var(--color-text); line-height: 1.8; margin-bottom: 24px; font-size: 0.97rem; }
+    .svc__list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-bottom: 28px; }
+    .svc__list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.95rem; color: var(--color-text); }
+    .svc__list li::before { content: '→'; color: var(--color-primary); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .svc__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-weight: 700; font-size: 0.88rem; text-decoration: none; margin-bottom: 36px; }
+    .back-link:hover { color: var(--color-dark); }
+    .cta-banner { background: var(--color-navy); padding: 64px 20px; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .note-box { background: #FFF8EE; border: 1px solid #FFD899; border-radius: 8px; padding: 12px 16px; margin-top: 16px; font-size: 0.85rem; color: var(--color-text); }
+    .note-box strong { color: var(--color-primary); }
+    .tier-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 20px 0; }
+    @media(min-width:640px){ .tier-grid { grid-template-columns: repeat(3,1fr); } }
+    .tier { background: var(--color-light); border-radius: 10px; padding: 16px; text-align: center; }
+    .tier__name { font-family: var(--font-serif); font-size: 1rem; color: var(--color-navy); margin-bottom: 4px; }
+    .tier__desc { font-size: 0.8rem; color: var(--color-subtle); }
+    .tier--active { background: var(--color-navy); }
+    .tier--active .tier__name, .tier--active .tier__desc { color: #fff; }
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn" aria-label="Sprache wechseln">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="../index.html#about" class="nav__link">Über mich</a>
+  <a href="../index.html#career" class="nav__link">Projekte</a>
+  <a href="index.html" class="nav__link">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link">Downloads</a>
+  <a href="../index.html#termin" class="nav__link">Termin</a>
+  <a href="../index.html#contact" class="nav__link">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <button class="btn-lang js-lang-btn">DE | EN</button>
+  </div>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Messe-Service</p>
+    <p class="page-hero__label">🎪 Messe-Service</p>
+    <h1 class="page-hero__title">Nutzen Sie jede Fachmesse als Sourcing-Maschine</h1>
+    <p class="page-hero__sub">Kein eigenes Team vor Ort nötig. Ich besuche Fachmessen in Ihrem Auftrag, sammle qualifizierte Lieferantenkontakte und liefere strukturierte Ergebnisse — von der Basis-Dokumentation bis zum vollständigen Follow-up-Service.</p>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← Alle Leistungen</a>
+
+    <div class="tier-grid" style="margin-bottom:48px">
+      <div class="tier"><p class="tier__name">Basis</p><p class="tier__desc">Besuch + Dokumentation</p></div>
+      <div class="tier tier--active"><p class="tier__name">Premium</p><p class="tier__desc">+ Nachbearbeitung & Outreach</p></div>
+      <div class="tier"><p class="tier__name">Full Service</p><p class="tier__desc">+ Follow-up & Shortlist</p></div>
+    </div>
+
+    <!-- MS-001 -->
+    <div class="svc">
+      <p class="svc__code">MS-001 · Messe-Service</p>
+      <h2 class="svc__title">Messebesuch – Basis</h2>
+      <div class="svc__value">10–15 qualifizierte Lieferantenkontakte inkl. Gesprächsnotizen und Fotos — ohne dass Sie selbst vor Ort sein müssen.</div>
+      <p class="svc__desc">Sie wollen eine Fachmesse nutzen, haben aber keine Kapazitäten für die Anreise oder die Zeit, die es braucht, um gezielt durch die Hallen zu gehen? Der Basis-Messebesuch übernimmt genau das. Ich besuche die Messe in Ihrem Auftrag, spreche gezielt relevante Aussteller an und dokumentiere alle Ergebnisse strukturiert.</p>
+      <ul class="svc__list">
+        <li>Abstimmung vorab: Welche Warengruppen, welche Anforderungen, welche Ziele?</li>
+        <li>Gezielter Besuch relevanter Aussteller auf der Messe</li>
+        <li>10–15 qualifizierte Lieferantengespräche mit strukturierten Gesprächsnotizen</li>
+        <li>Fotos der Aussteller, Produkte und Messestände</li>
+        <li>Nachbericht mit allen Kontakten und einem ersten Überblick</li>
+      </ul>
+      <div class="note-box"><strong>Hinweis: </strong>Reise- und Unterkunftskosten werden separat nach Aufwand berechnet.</div>
+      <div class="svc__cta" style="margin-top:20px">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+    <!-- MS-002 -->
+    <div class="svc">
+      <p class="svc__code">MS-002 · Messe-Service</p>
+      <h2 class="svc__title">Messebesuch – Premium</h2>
+      <div class="svc__value">Alle Messekontakte werden direkt nach der Messe professionell angeschrieben — mit personalisierten E-Mails, strukturierter Excel-Dokumentation und einem Kurzreport.</div>
+      <p class="svc__desc">Was nützen 15 Visitenkarten, wenn niemand nachfasst? Das Premium-Paket macht aus Messekontakten echte Lieferantenbeziehungen. Direkt nach der Messe erhalten alle relevanten Kontakte eine personalisierte Nachricht, die Ergebnisse werden in Excel dokumentiert und ein Kurzreport fasst die wichtigsten Erkenntnisse zusammen.</p>
+      <ul class="svc__list">
+        <li>Alles aus dem Basis-Paket</li>
+        <li>Personalisierte Nachfass-E-Mails an alle relevanten Messekontakte (innerhalb 48h)</li>
+        <li>Vollständige Excel-Dokumentation aller Kontakte mit Status und Gesprächsnotizen</li>
+        <li>Kurzreport: Highlights der Messe, auffällige Lieferanten, Marktbeobachtungen</li>
+        <li>Übergabe aller Materialien in strukturierter Form</li>
+      </ul>
+      <div class="note-box"><strong>Hinweis: </strong>Reise- und Unterkunftskosten werden separat nach Aufwand berechnet.</div>
+      <div class="svc__cta" style="margin-top:20px">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+    <!-- MS-003 -->
+    <div class="svc">
+      <p class="svc__code">MS-003 · Messe-Service</p>
+      <h2 class="svc__title">Messebesuch – Full Service</h2>
+      <div class="svc__value">Von der Messehalle bis zur fertigen Lieferantenempfehlung — alles aus einer Hand. Inklusive Follow-up, Shortlist und klar definierten nächsten Schritten.</div>
+      <p class="svc__desc">Das Full-Service-Paket ist das Rundum-sorglos-Angebot für alle, die aus einer Fachmesse das Maximum herausholen wollen — ohne sich selbst darum kümmern zu müssen. Nach dem Besuch und der Nachbearbeitung werden alle Antworten kategorisiert, eine priorisierte Shortlist der vielversprechendsten Lieferanten erstellt und die drei besten Optionen persönlich vorgestellt.</p>
+      <ul class="svc__list">
+        <li>Alles aus dem Premium-Paket</li>
+        <li>Kategorisierung aller Antworten (interessiert / offen / nicht geeignet)</li>
+        <li>Erstellung einer priorisierten Shortlist der Top-Lieferanten</li>
+        <li>Persönliche Vorstellung der Top-3 Lieferanten mit Vor- und Nachteilen</li>
+        <li>Klare Empfehlung für nächste Schritte (Angebotsanfrage, Audit, Probebestellung)</li>
+      </ul>
+      <div class="note-box"><strong>Hinweis: </strong>Reise- und Unterkunftskosten werden separat nach Aufwand berechnet.</div>
+      <div class="svc__cta" style="margin-top:20px">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+    <!-- MS-004 -->
+    <div class="svc">
+      <p class="svc__code">MS-004 · Messe-Service · Add-on</p>
+      <h2 class="svc__title">Messe-Vorbereitung (remote)</h2>
+      <div class="svc__value">Relevante Aussteller recherchiert, Termine geplant, Gesprächsleitfäden erstellt — damit kein Messetag verschwendet wird.</div>
+      <p class="svc__desc">Eine Messe ohne Vorbereitung ist eine Messe voller verpasster Chancen. Die Messe-Vorbereitung recherchiert alle relevanten Aussteller im Vorfeld, plant eine strukturierte Besuchsroute und erstellt individuelle Gesprächsleitfäden — remote, als Add-on zu den Besuchspaketen oder auch als eigenständige Leistung für Ihr eigenes Messebesuchsteam.</p>
+      <ul class="svc__list">
+        <li>Recherche aller relevanten Aussteller im Ausstellerverzeichnis</li>
+        <li>Vorauswahl nach Ihren Kriterien und Erstellung einer Besuchsliste</li>
+        <li>Terminplanung für priorisierte Gespräche</li>
+        <li>Gesprächsleitfaden mit Zielvorgaben und Kernfragen pro Lieferant</li>
+        <li>Übergabe als kompaktes Messe-Briefing</li>
+      </ul>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+    <!-- MS-005 -->
+    <div class="svc">
+      <p class="svc__code">MS-005 · Messe-Service</p>
+      <h2 class="svc__title">Messe-Nachbereitung (remote)</h2>
+      <div class="svc__value">Sie waren selbst auf der Messe und haben Kontakte gesammelt? Ich verarbeite alles professionell: E-Mails, Excel-Dokumentation, Bewertung und Empfehlungen.</div>
+      <p class="svc__desc">Messekontakte veralten schnell — nach spätestens einer Woche ist der Kontext weg, die Visitenkarten stapeln sich und nichts wurde weiterverfolgt. Die Messe-Nachbereitung wertet Ihre gesammelten Kontakte aus, schreibt alle relevanten Lieferanten an, dokumentiert alles strukturiert und bewertet die Kontakte nach Potenzial.</p>
+      <ul class="svc__list">
+        <li>Aufbereitung Ihrer gesammelten Messekontakte (Visitenkarten, Notizen, Unterlagen)</li>
+        <li>Personalisierte Nachfass-E-Mails an alle relevanten Kontakte</li>
+        <li>Strukturierte Excel-Dokumentation aller Kontakte</li>
+        <li>Bewertung nach Potenzial und Empfehlung für nächste Schritte</li>
+        <li>Übergabe innerhalb von 5 Werktagen nach Materialübergabe</li>
+      </ul>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Jetzt anfragen</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Frage stellen</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Steht bald eine Fachmesse an?</h2>
+    <p>Sagen Sie mir, welche Messe und welche Warengruppe — ich zeige Ihnen, welches Paket für Sie passt.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — BSCP</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Leistungen</h4>
+      <ul class="footer__list">
+        <li><a href="pakete.html">Pakete</a></li>
+        <li><a href="recherche.html">Recherche</a></li>
+        <li><a href="messe-service.html">Messe-Service</a></li>
+        <li><a href="beratung.html">Beratung</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="../impressum.html">Impressum</a></li>
+        <li><a href="../datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+</body>
+</html>
