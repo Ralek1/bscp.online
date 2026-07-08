@@ -39,11 +39,25 @@
     .deliverable-box { background: var(--color-light); border-radius: 10px; padding: 16px 20px; margin-top: 20px; font-size: 0.88rem; color: var(--color-text); }
     .deliverable-box strong { color: var(--color-primary); display: block; margin-bottom: 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
   </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MC4JQGW2NL"></script>
+  <!-- Consent Mode v2 — muss VOR gtag.js stehen -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage:  'denied',
+      ad_storage:         'denied',
+      ad_user_data:       'denied',
+      ad_personalization: 'denied',
+      wait_for_update:    500
+    });
+    (function(){
+      var c = localStorage.getItem('bscp_consent');
+      if (c === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' });
+    })();
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MC4JQGW2NL"></script>
+  <script>
     gtag('js', new Date());
     gtag('config', 'G-MC4JQGW2NL');
   </script>
@@ -185,5 +199,57 @@
 </footer>
 <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 <script src="../script.js"></script>
+
+<!-- ░ Cookie Consent Banner ░ -->
+<div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="bscp-cookie__inner">
+    <div class="bscp-cookie__text">
+      <strong>Diese Website verwendet Cookies</strong>
+      <p>Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+    </div>
+    <div class="bscp-cookie__actions">
+      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out">Ablehnen</button>
+      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+<style>
+  #bscp-cookie{display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;
+    background:#1E3A5F;border-top:3px solid #FF8C00;padding:18px 24px;
+    box-shadow:0 -4px 24px rgba(0,0,0,.18);}
+  .bscp-cookie__inner{max-width:1100px;margin:0 auto;display:flex;
+    align-items:center;gap:24px;flex-wrap:wrap;}
+  .bscp-cookie__text{flex:1;min-width:260px;color:rgba(255,255,255,.82);
+    font-size:.87rem;line-height:1.55;}
+  .bscp-cookie__text strong{display:block;color:#fff;font-size:.95rem;margin-bottom:4px;}
+  .bscp-cookie__text p{margin:0;}
+  .bscp-cookie__actions{display:flex;gap:10px;flex-shrink:0;}
+  .bscp-cookie__btn{padding:10px 22px;border-radius:6px;font-size:.87rem;
+    font-weight:700;cursor:pointer;border:2px solid transparent;
+    transition:background .2s,border-color .2s,color .2s;white-space:nowrap;}
+  .bscp-cookie__btn--ok{background:#FF8C00;color:#fff;border-color:#FF8C00;}
+  .bscp-cookie__btn--ok:hover{background:#d47800;border-color:#d47800;}
+  .bscp-cookie__btn--out{background:transparent;color:rgba(255,255,255,.75);
+    border-color:rgba(255,255,255,.35);}
+  .bscp-cookie__btn--out:hover{border-color:#fff;color:#fff;}
+  @media(max-width:600px){.bscp-cookie__actions{width:100%;justify-content:flex-end;}}
+</style>
+<script>
+  (function(){
+    if(!localStorage.getItem('bscp_consent')){
+      document.getElementById('bscp-cookie').style.display='block';
+    }
+  })();
+  function bscpAccept(){
+    gtag('consent','update',{analytics_storage:'granted'});
+    localStorage.setItem('bscp_consent','granted');
+    document.getElementById('bscp-cookie').style.display='none';
+  }
+  function bscpDecline(){
+    gtag('consent','update',{analytics_storage:'denied'});
+    localStorage.setItem('bscp_consent','denied');
+    document.getElementById('bscp-cookie').style.display='none';
+  }
+</script>
 </body>
 </html>
