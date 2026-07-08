@@ -19,6 +19,9 @@
     .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 40px; color: var(--color-primary); font-weight: 700; }
     .back-link:hover { color: var(--color-dark); }
     .source { margin-top: 48px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 0.82rem; color: var(--color-subtle); }
+    /* Language switching */
+    html[lang="en"] .lang-de { display: none; }
+    html[lang="de"] .lang-en { display: none; }
   </style>
   <!-- Consent Mode v2 — muss VOR gtag.js stehen -->
   <script>
@@ -97,61 +100,124 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ── CONTENT ── -->
 <div class="legal-page">
-  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
 
-  <h1>Datenschutzerklärung</h1>
-  <p><em>Stand: Juli 2026</em></p>
+  <!-- ══ DEUTSCH ══ -->
+  <div class="lang-de">
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
 
-  <!-- 1 -->
-  <h2>1. Verantwortliche Stelle</h2>
-  <address>
-    Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)<br />
-    Rosenleite 16, 90619 Trautskirchen<br /><br />
-    Tel: <a href="tel:+4916099611580">+49 160 99611580</a><br />
-    E-Mail: <a href="mailto:info@bscp.online">info@bscp.online</a>
-  </address>
+    <h1>Datenschutzerklärung</h1>
+    <p><em>Stand: Juli 2026</em></p>
 
-  <!-- 2 -->
-  <h2>2. Hosting — GitHub Pages</h2>
-  <p>Diese Website wird über <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) bereitgestellt. Beim Aufruf der Seite verarbeitet GitHub automatisch Server-Logdaten wie IP-Adresse, Browsertyp, aufgerufene URL und Datum/Uhrzeit des Zugriffs. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicher betriebenen Webauftritt). Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+    <!-- 1 -->
+    <h2>1. Verantwortliche Stelle</h2>
+    <address>
+      Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)<br />
+      Rosenleite 16, 90619 Trautskirchen<br /><br />
+      Tel: <a href="tel:+4916099611580">+49 160 99611580</a><br />
+      E-Mail: <a href="mailto:info@bscp.online">info@bscp.online</a>
+    </address>
 
-  <!-- 3 -->
-  <h2>3. Cookies &amp; lokaler Speicher</h2>
-  <p>Diese Website setzt <strong>keine Tracking-Cookies</strong>. Die Consent-Entscheidung (Akzeptieren / Ablehnen) wird ausschließlich im <code>localStorage</code> Ihres Browsers unter dem Schlüssel <code>bscp_consent</code> gespeichert. Dieser Eintrag verlässt Ihren Browser nicht und wird nicht an Dritte übermittelt. Sie können Ihre Wahl jederzeit über <strong>Footer → Cookie-Einstellungen</strong> widerrufen.</p>
+    <!-- 2 -->
+    <h2>2. Hosting — GitHub Pages</h2>
+    <p>Diese Website wird über <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) bereitgestellt. Beim Aufruf der Seite verarbeitet GitHub automatisch Server-Logdaten wie IP-Adresse, Browsertyp, aufgerufene URL und Datum/Uhrzeit des Zugriffs. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicher betriebenen Webauftritt). Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
 
-  <!-- 4 -->
-  <h2>4. Analyse — Google Analytics &amp; Google Tag Manager</h2>
-  <p>Mit Ihrer Einwilligung (Cookie-Banner) nutzen wir <strong>Google Analytics 4</strong> (Mess-ID: G-MC4JQGW2NL) sowie den <strong>Google Tag Manager</strong> (Container-ID: GTM-5XB3J63W), bereitgestellt von Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
-  <p>Wir setzen <strong>Google Consent Mode v2</strong> ein: Ohne Ihre Zustimmung werden <code>analytics_storage</code>, <code>ad_storage</code>, <code>ad_user_data</code> und <code>ad_personalization</code> auf <em>denied</em> gesetzt. Es werden in diesem Fall keine identifizierenden Daten erfasst oder weitergeleitet. Rechtsgrundlage bei erteilter Einwilligung: Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (Footer → Cookie-Einstellungen).</p>
-  <p>Datenübermittlung in die USA erfolgt auf Basis der EU-Standardvertragsklauseln. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>.</p>
+    <!-- 3 -->
+    <h2>3. Cookies &amp; lokaler Speicher</h2>
+    <p>Diese Website setzt <strong>keine Tracking-Cookies</strong>. Die Consent-Entscheidung (Akzeptieren / Ablehnen) wird ausschließlich im <code>localStorage</code> Ihres Browsers unter dem Schlüssel <code>bscp_consent</code> gespeichert. Dieser Eintrag verlässt Ihren Browser nicht und wird nicht an Dritte übermittelt. Sie können Ihre Wahl jederzeit über <strong>Footer → Cookie-Einstellungen</strong> widerrufen.</p>
 
-  <!-- 5 -->
-  <h2>5. Terminbuchung — Cal.com</h2>
-  <p>Für die Buchung von Terminen (Abschnitt „Termin" auf der Startseite) wird <strong>Cal.com</strong> (Cal.com, Inc., 3626 North Hall Street, Dallas, TX 75219, USA) eingebunden. Beim Ausfüllen eines Buchungsformulars werden Name, E-Mail-Adresse und ggf. weitere Angaben an Cal.com übermittelt und dort verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Weitere Informationen: <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com Privacy Policy</a>.</p>
+    <!-- 4 -->
+    <h2>4. Analyse — Google Analytics &amp; Google Tag Manager</h2>
+    <p>Mit Ihrer Einwilligung (Cookie-Banner) nutzen wir <strong>Google Analytics 4</strong> (Mess-ID: G-MC4JQGW2NL) sowie den <strong>Google Tag Manager</strong> (Container-ID: GTM-5XB3J63W), bereitgestellt von Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+    <p>Wir setzen <strong>Google Consent Mode v2</strong> ein: Ohne Ihre Zustimmung werden <code>analytics_storage</code>, <code>ad_storage</code>, <code>ad_user_data</code> und <code>ad_personalization</code> auf <em>denied</em> gesetzt. Es werden in diesem Fall keine identifizierenden Daten erfasst oder weitergeleitet. Rechtsgrundlage bei erteilter Einwilligung: Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen (Footer → Cookie-Einstellungen).</p>
+    <p>Datenübermittlung in die USA erfolgt auf Basis der EU-Standardvertragsklauseln. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>.</p>
 
-  <!-- 6 -->
-  <h2>6. Kontaktformular — Formspree</h2>
-  <p>Das Kontaktformular auf dieser Website verwendet <strong>Formspree</strong> (Formspree Inc., 5 Union Square W, New York, NY 10003, USA) als Übermittlungsdienst. Die von Ihnen eingegebenen Daten (Name, E-Mail, Nachricht) werden über Formspree an meine E-Mail-Adresse weitergeleitet und dort gespeichert. Formspree verarbeitet die Daten auf Servern in den USA; eine Datenübermittlung erfolgt auf Basis der EU-Standardvertragsklauseln. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage). Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
-  <p>Kontaktanfragen per E-Mail oder Telefon werden ausschließlich zur Bearbeitung Ihres Anliegens verwendet und nach Abschluss gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
+    <!-- 5 -->
+    <h2>5. Terminbuchung — Cal.com</h2>
+    <p>Für die Buchung von Terminen (Abschnitt „Termin" auf der Startseite) wird <strong>Cal.com</strong> (Cal.com, Inc., 3626 North Hall Street, Dallas, TX 75219, USA) eingebunden. Beim Ausfüllen eines Buchungsformulars werden Name, E-Mail-Adresse und ggf. weitere Angaben an Cal.com übermittelt und dort verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Weitere Informationen: <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com Privacy Policy</a>.</p>
 
-  <!-- 7 -->
-  <h2>7. Ihre Rechte</h2>
-  <p>Sie haben gegenüber der verantwortlichen Stelle folgende Rechte:</p>
-  <ul>
-    <li><strong>Auskunft</strong> über gespeicherte personenbezogene Daten (Art. 15 DSGVO)</li>
-    <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</li>
-    <li><strong>Löschung</strong> Ihrer Daten (Art. 17 DSGVO)</li>
-    <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18 DSGVO)</li>
-    <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
-    <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21 DSGVO)</li>
-    <li><strong>Widerruf</strong> einer erteilten Einwilligung jederzeit mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
-    <li><strong>Beschwerde</strong> bei einer Datenschutz-Aufsichtsbehörde, z. B. dem Bayerischen Landesbeauftragten für den Datenschutz (BayLfD), <a href="https://www.datenschutz-bayern.de" target="_blank" rel="noopener">www.datenschutz-bayern.de</a></li>
-  </ul>
-  <p>Für Anfragen wenden Sie sich bitte an: <a href="mailto:info@bscp.online">info@bscp.online</a></p>
+    <!-- 6 -->
+    <h2>6. Kontaktformular — Formspree</h2>
+    <p>Das Kontaktformular auf dieser Website verwendet <strong>Formspree</strong> (Formspree Inc., 5 Union Square W, New York, NY 10003, USA) als Übermittlungsdienst. Die von Ihnen eingegebenen Daten (Name, E-Mail, Nachricht) werden über Formspree an meine E-Mail-Adresse weitergeleitet und dort gespeichert. Formspree verarbeitet die Daten auf Servern in den USA; eine Datenübermittlung erfolgt auf Basis der EU-Standardvertragsklauseln. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage). Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
+    <p>Kontaktanfragen per E-Mail oder Telefon werden ausschließlich zur Bearbeitung Ihres Anliegens verwendet und nach Abschluss gelöscht, sofern keine gesetzliche Aufbewahrungspflicht besteht.</p>
 
-  <!-- 8 -->
-  <h2>8. SSL/TLS-Verschlüsselung</h2>
-  <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol und an <code>https://</code> in der Adresszeile Ihres Browsers.</p>
+    <!-- 7 -->
+    <h2>7. Ihre Rechte</h2>
+    <p>Sie haben gegenüber der verantwortlichen Stelle folgende Rechte:</p>
+    <ul>
+      <li><strong>Auskunft</strong> über gespeicherte personenbezogene Daten (Art. 15 DSGVO)</li>
+      <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO)</li>
+      <li><strong>Löschung</strong> Ihrer Daten (Art. 17 DSGVO)</li>
+      <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18 DSGVO)</li>
+      <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO)</li>
+      <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21 DSGVO)</li>
+      <li><strong>Widerruf</strong> einer erteilten Einwilligung jederzeit mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
+      <li><strong>Beschwerde</strong> bei einer Datenschutz-Aufsichtsbehörde, z. B. dem Bayerischen Landesbeauftragten für den Datenschutz (BayLfD), <a href="https://www.datenschutz-bayern.de" target="_blank" rel="noopener">www.datenschutz-bayern.de</a></li>
+    </ul>
+    <p>Für Anfragen wenden Sie sich bitte an: <a href="mailto:info@bscp.online">info@bscp.online</a></p>
+
+    <!-- 8 -->
+    <h2>8. SSL/TLS-Verschlüsselung</h2>
+    <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol und an <code>https://</code> in der Adresszeile Ihres Browsers.</p>
+  </div>
+
+  <!-- ══ ENGLISH ══ -->
+  <div class="lang-en">
+    <a href="index.html" class="back-link">← Back to Homepage</a>
+
+    <h1>Privacy Policy</h1>
+    <p><em>Last updated: July 2026</em></p>
+
+    <!-- 1 -->
+    <h2>1. Data Controller</h2>
+    <address>
+      Egor Becker — Becker Supply Chain &amp; Procurement (BSCP)<br />
+      Rosenleite 16, 90619 Trautskirchen, Germany<br /><br />
+      Phone: <a href="tel:+4916099611580">+49 160 99611580</a><br />
+      E-mail: <a href="mailto:info@bscp.online">info@bscp.online</a>
+    </address>
+
+    <!-- 2 -->
+    <h2>2. Hosting — GitHub Pages</h2>
+    <p>This website is hosted via <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). When you visit the site, GitHub automatically processes server log data such as your IP address, browser type, requested URL, and date/time of access. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in operating a secure website). Further information: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
+
+    <!-- 3 -->
+    <h2>3. Cookies &amp; Local Storage</h2>
+    <p>This website does <strong>not set any tracking cookies</strong>. Your consent decision (Accept / Decline) is stored exclusively in your browser's <code>localStorage</code> under the key <code>bscp_consent</code>. This entry never leaves your browser and is not transmitted to any third party. You may revoke your choice at any time via <strong>Footer → Cookie Settings</strong>.</p>
+
+    <!-- 4 -->
+    <h2>4. Analytics — Google Analytics &amp; Google Tag Manager</h2>
+    <p>With your consent (cookie banner), we use <strong>Google Analytics 4</strong> (Measurement ID: G-MC4JQGW2NL) and <strong>Google Tag Manager</strong> (Container ID: GTM-5XB3J63W), provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</p>
+    <p>We implement <strong>Google Consent Mode v2</strong>: without your consent, <code>analytics_storage</code>, <code>ad_storage</code>, <code>ad_user_data</code>, and <code>ad_personalization</code> are set to <em>denied</em>. In this case, no identifying data is collected or transmitted. Legal basis where consent is given: Art. 6(1)(a) GDPR. You may withdraw your consent at any time with future effect (Footer → Cookie Settings).</p>
+    <p>Data transfers to the USA are carried out on the basis of EU Standard Contractual Clauses. Further information: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+    <!-- 5 -->
+    <h2>5. Appointment Booking — Cal.com</h2>
+    <p>For booking appointments (the "Appointment" section on the homepage), we embed <strong>Cal.com</strong> (Cal.com, Inc., 3626 North Hall Street, Dallas, TX 75219, USA). When you complete a booking form, your name, e-mail address, and any other details you provide are transmitted to and processed by Cal.com. Legal basis: Art. 6(1)(b) GDPR (pre-contractual measures). Further information: <a href="https://cal.com/privacy" target="_blank" rel="noopener">Cal.com Privacy Policy</a>.</p>
+
+    <!-- 6 -->
+    <h2>6. Contact Form — Formspree</h2>
+    <p>The contact form on this website uses <strong>Formspree</strong> (Formspree Inc., 5 Union Square W, New York, NY 10003, USA) as a submission service. The data you enter (name, e-mail, message) is forwarded via Formspree to my e-mail address and stored there. Formspree processes data on servers in the USA; the transfer is carried out on the basis of EU Standard Contractual Clauses. Legal basis: Art. 6(1)(b) GDPR (processing your enquiry). Further information: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
+    <p>Contact enquiries received by e-mail or phone are used solely to handle your request and are deleted once the matter is resolved, unless a statutory retention obligation applies.</p>
+
+    <!-- 7 -->
+    <h2>7. Your Rights</h2>
+    <p>You have the following rights with respect to the data controller:</p>
+    <ul>
+      <li><strong>Access</strong> to your stored personal data (Art. 15 GDPR)</li>
+      <li><strong>Rectification</strong> of inaccurate data (Art. 16 GDPR)</li>
+      <li><strong>Erasure</strong> of your data (Art. 17 GDPR)</li>
+      <li><strong>Restriction</strong> of processing (Art. 18 GDPR)</li>
+      <li><strong>Data portability</strong> (Art. 20 GDPR)</li>
+      <li><strong>Objection</strong> to processing (Art. 21 GDPR)</li>
+      <li><strong>Withdrawal</strong> of any consent given, at any time with future effect (Art. 7(3) GDPR)</li>
+      <li><strong>Complaint</strong> to a data protection supervisory authority, e.g. the Bavarian State Commissioner for Data Protection (BayLfD), <a href="https://www.datenschutz-bayern.de" target="_blank" rel="noopener">www.datenschutz-bayern.de</a></li>
+    </ul>
+    <p>To exercise your rights, please contact: <a href="mailto:info@bscp.online">info@bscp.online</a></p>
+
+    <!-- 8 -->
+    <h2>8. SSL/TLS Encryption</h2>
+    <p>This site uses SSL/TLS encryption for security reasons. You can identify an encrypted connection by the padlock icon and <code>https://</code> in your browser's address bar.</p>
+  </div>
 
 </div>
 
@@ -208,12 +274,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
   <div class="bscp-cookie__inner">
     <div class="bscp-cookie__text">
-      <strong>Diese Website verwendet Cookies</strong>
-      <p>Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+      <strong class="lang-de">Diese Website verwendet Cookies</strong>
+      <strong class="lang-en">This website uses cookies</strong>
+      <p class="lang-de">Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+      <p class="lang-en">We use Google Analytics to understand how visitors use our site. You can accept or decline analytics. Your choice applies to all pages of this website.</p>
     </div>
     <div class="bscp-cookie__actions">
-      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out">Ablehnen</button>
-      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok">Akzeptieren</button>
+      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out"><span class="lang-de">Ablehnen</span><span class="lang-en">Decline</span></button>
+      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok"><span class="lang-de">Akzeptieren</span><span class="lang-en">Accept</span></button>
     </div>
   </div>
 </div>
