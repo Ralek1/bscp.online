@@ -72,12 +72,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav__inner">
     <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
     <ul class="nav__links" role="list">
-      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
-      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
-      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
-      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
-      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
-      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+      <li><a href="../index.html#about"     class="nav__link" data-de="Über mich" data-en="About">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" data-de="Leistungen" data-en="Services" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link" data-de="Termin" data-en="Appointment">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
     </ul>
     <div class="nav__controls">
       <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
@@ -90,18 +90,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 <div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
-  <a href="../index.html#about" class="nav__link">Über mich</a>
-  <a href="../index.html#career" class="nav__link">Projekte</a>
-  <a href="index.html" class="nav__link">Leistungen</a>
-  <a href="../index.html#downloads" class="nav__link">Downloads</a>
-  <a href="../index.html#termin" class="nav__link">Termin</a>
-  <a href="../index.html#contact" class="nav__link">Kontakt</a>
+  <a href="../index.html#about" class="nav__link" data-de="Über mich" data-en="About">Über mich</a>
+  <a href="../index.html#career" class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a>
+  <a href="index.html" class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a>
+  <a href="../index.html#termin" class="nav__link" data-de="Termin" data-en="Appointment">Termin</a>
+  <a href="../index.html#contact" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
   <div class="nav__overlay-controls">
     <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
     <button class="btn-lang js-lang-btn">DE | EN</button>
   </div>
 </div>
 
+<div class="lang-de">
 <div class="page-hero">
   <div class="page-hero__inner">
     <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Outreach</p>
@@ -163,15 +164,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
   </div>
 </div>
+</div>
+
+<div class="lang-en">
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Services</a><span>/</span>Outreach</p>
+    <p class="page-hero__label">📧 Outreach</p>
+    <h1 class="page-hero__title">First Contacts That Suppliers Take Seriously</h1>
+    <p class="page-hero__sub">Generic mass enquiries get ignored. Personalised, professional outreach opens doors — and structured follow-up keeps them open.</p>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← All Services</a>
+
+    <div class="svc">
+      <p class="svc__code">EL-003 · Outreach</p>
+      <h2 class="svc__title">E-Mail Outreach Campaign</h2>
+      <div class="svc__value">Up to 30 personalised first-contact e-mails to qualified suppliers — incl. tracking of open and response rates.</div>
+      <p class="svc__desc">First impressions matter. Suppliers receive dozens of standard enquiries every day — personalised, expert outreach stands out and generates genuine interest. Every e-mail is individually tailored to the supplier, their products and your specific need. The result: significantly higher response rates than with standard templates.</p>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Enquire Now</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Ask a Question</a>
+      </div>
+    </div>
+
+    <div class="svc">
+      <p class="svc__code">EL-004 · Outreach</p>
+      <h2 class="svc__title">Follow-up Management</h2>
+      <div class="svc__value">No supplier contact goes cold — structured follow-up, categorise responses and a clean shortlist as the outcome.</div>
+      <p class="svc__desc">Most enquiries fail not at first contact but because nobody follows up. Suppliers are busy — those who follow up systematically get prioritised. Follow-up management does exactly that: all open contacts are followed up, responses are categorised and a prioritised shortlist is created that you can take directly into the quotation phase.</p>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Enquire Now</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Ask a Question</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Need New Supplier Contacts?</h2>
+    <p>Tell me your commodity and target market — I'll show you what's possible.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Book a Free Initial Consultation</a>
+  </div>
+</div>
+</div>
 
 <footer class="footer">
   <div class="footer__grid container">
     <div class="footer__brand">
       <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
-      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+      <p class="footer__tagline" data-de="Freiberuflicher Technischer Einkäufer & SQM-Spezialist" data-en="Freelance Technical Buyer & SQM Specialist">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Kontakt</h4>
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
       <ul class="footer__list">
         <li>Egor Becker — BSCP</li>
         <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
@@ -180,25 +230,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Leistungen</h4>
+      <h4 class="footer__heading" data-de="Leistungen" data-en="Services">Leistungen</h4>
       <ul class="footer__list">
         <li><a href="pakete.html">Pakete</a></li>
         <li><a href="outreach.html">Outreach</a></li>
         <li><a href="analyse.html">Analyse</a></li>
-        <li><a href="messe-service.html">Messe-Service</a></li>
+        <li><a href="messe-service.html" data-de="Messe-Service" data-en="Trade Fair Service">Messe-Service</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Rechtliches</h4>
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
       <ul class="footer__list">
-        <li><a href="../impressum.html">Impressum</a></li>
-        <li><a href="../datenschutz.html">Datenschutz</a></li>
-        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;">Cookie-Einstellungen</button></li>
+        <li><a href="../impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
+        <li><a href="../datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;" data-de="Cookie-Einstellungen" data-en="Cookie Settings">Cookie-Einstellungen</button></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
   </div>
 </footer>
 <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
@@ -208,12 +258,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
   <div class="bscp-cookie__inner">
     <div class="bscp-cookie__text">
-      <strong>Diese Website verwendet Cookies</strong>
-      <p>Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+      <strong class="lang-de">Diese Website verwendet Cookies</strong><strong class="lang-en">This website uses cookies</strong>
+      <p class="lang-de">Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p><p class="lang-en">We use Google Analytics to understand how visitors use our site. You can accept or decline analytics. Your choice applies to all pages of this website.</p>
     </div>
     <div class="bscp-cookie__actions">
-      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out">Ablehnen</button>
-      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok">Akzeptieren</button>
+      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out"><span class="lang-de">Ablehnen</span><span class="lang-en">Decline</span></button>
+      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok"><span class="lang-de">Akzeptieren</span><span class="lang-en">Accept</span></button>
     </div>
   </div>
 </div>

@@ -75,12 +75,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav__inner">
     <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
     <ul class="nav__links" role="list">
-      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
-      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
-      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
-      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
-      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
-      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+      <li><a href="../index.html#about"     class="nav__link" data-de="Über mich" data-en="About">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" data-de="Leistungen" data-en="Services" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link" data-de="Termin" data-en="Appointment">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
     </ul>
     <div class="nav__controls">
       <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
@@ -93,18 +93,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 <div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
-  <a href="../index.html#about" class="nav__link">Über mich</a>
-  <a href="../index.html#career" class="nav__link">Projekte</a>
-  <a href="index.html" class="nav__link">Leistungen</a>
-  <a href="../index.html#downloads" class="nav__link">Downloads</a>
-  <a href="../index.html#termin" class="nav__link">Termin</a>
-  <a href="../index.html#contact" class="nav__link">Kontakt</a>
+  <a href="../index.html#about" class="nav__link" data-de="Über mich" data-en="About">Über mich</a>
+  <a href="../index.html#career" class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a>
+  <a href="index.html" class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a>
+  <a href="../index.html#termin" class="nav__link" data-de="Termin" data-en="Appointment">Termin</a>
+  <a href="../index.html#contact" class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
   <div class="nav__overlay-controls">
     <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
     <button class="btn-lang js-lang-btn">DE | EN</button>
   </div>
 </div>
 
+<div class="lang-de">
 <div class="page-hero">
   <div class="page-hero__inner">
     <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Beratung</p>
@@ -172,15 +173,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="../index.html#termin" class="btn btn--primary">Termin buchen</a>
   </div>
 </div>
+</div>
+
+<div class="lang-en">
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Services</a><span>/</span>Consulting</p>
+    <p class="page-hero__label">💡 Consulting</p>
+    <h1 class="page-hero__title">Expert Knowledge — Exactly When You Need It</h1>
+    <p class="page-hero__sub">No long project lead time, no minimum commitment. Flexible consulting hours for specific questions, workshops and technical implementations — remote, direct and practice-oriented.</p>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← All Services</a>
+
+    <div class="svc">
+      <p class="svc__code">ST-001 · Hourly Rate</p>
+      <h2 class="svc__title">Consulting &amp; Advisory</h2>
+      <div class="svc__value">Direct answers to your specific procurement questions — no detours, no consultant jargon. Practically applicable from the first hour.</div>
+      <p class="svc__desc">Do you have a specific procurement question and need a clear answer, not a study? Or do you want a workshop for your team to better understand procurement processes? The consulting hours are the most flexible offering in the portfolio — bookable from 2 hours, remote via video call, fully tailored to your situation.</p>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Enquire Now</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Ask a Question</a>
+      </div>
+    </div>
+
+    <div class="svc">
+      <p class="svc__code">ST-002 · Hourly Rate</p>
+      <h2 class="svc__title">Technical Implementation (AI &amp; Excel)</h2>
+      <div class="svc__value">Automations, scripts and dashboards — tailored for your daily procurement work. Fast implementation, immediately usable results.</div>
+      <p class="svc__desc">Do you have a specific technical requirement in procurement — a dashboard, automated reporting, an Excel model or an AI workflow — but nobody to implement it quickly and practically? These hours are designed for exactly such tasks. Minimum booking 2 hours, fully remote, with handover and brief briefing.</p>
+      <div class="svc__cta">
+        <a href="../index.html#termin" class="btn btn--orange">Enquire Now</a>
+        <a href="../index.html#contact" class="btn btn--outline" style="color:var(--color-navy);border-color:var(--color-navy)">Ask a Question</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Got a Specific Question?</h2>
+    <p>Book 30 minutes — free and without obligation. We'll see if I can help.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Book a Free Initial Consultation</a>
+  </div>
+</div>
+</div>
 
 <footer class="footer">
   <div class="footer__grid container">
     <div class="footer__brand">
       <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
-      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+      <p class="footer__tagline" data-de="Freiberuflicher Technischer Einkäufer & SQM-Spezialist" data-en="Freelance Technical Buyer & SQM Specialist">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Kontakt</h4>
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
       <ul class="footer__list">
         <li>Egor Becker — BSCP</li>
         <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
@@ -189,25 +239,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Leistungen</h4>
+      <h4 class="footer__heading" data-de="Leistungen" data-en="Services">Leistungen</h4>
       <ul class="footer__list">
         <li><a href="pakete.html">Pakete</a></li>
         <li><a href="beratung.html">Beratung</a></li>
         <li><a href="prozesse.html">Prozesse & KI</a></li>
-        <li><a href="messe-service.html">Messe-Service</a></li>
+        <li><a href="messe-service.html" data-de="Messe-Service" data-en="Trade Fair Service">Messe-Service</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Rechtliches</h4>
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
       <ul class="footer__list">
-        <li><a href="../impressum.html">Impressum</a></li>
-        <li><a href="../datenschutz.html">Datenschutz</a></li>
-        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;">Cookie-Einstellungen</button></li>
+        <li><a href="../impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
+        <li><a href="../datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;" data-de="Cookie-Einstellungen" data-en="Cookie Settings">Cookie-Einstellungen</button></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
   </div>
 </footer>
 <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
@@ -217,12 +267,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
   <div class="bscp-cookie__inner">
     <div class="bscp-cookie__text">
-      <strong>Diese Website verwendet Cookies</strong>
-      <p>Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+      <strong class="lang-de">Diese Website verwendet Cookies</strong><strong class="lang-en">This website uses cookies</strong>
+      <p class="lang-de">Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p><p class="lang-en">We use Google Analytics to understand how visitors use our site. You can accept or decline analytics. Your choice applies to all pages of this website.</p>
     </div>
     <div class="bscp-cookie__actions">
-      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out">Ablehnen</button>
-      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok">Akzeptieren</button>
+      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out"><span class="lang-de">Ablehnen</span><span class="lang-en">Decline</span></button>
+      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok"><span class="lang-de">Akzeptieren</span><span class="lang-en">Accept</span></button>
     </div>
   </div>
 </div>

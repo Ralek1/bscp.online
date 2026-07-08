@@ -972,3 +972,8 @@ section { padding: 80px 20px; }
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+
+/* ── Language section toggle (lang-de / lang-en) ─── */
+html[lang="en"] .lang-de { display: none; }
+html[lang="de"] .lang-en { display: none; }

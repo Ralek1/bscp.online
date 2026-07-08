@@ -100,12 +100,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav__inner">
     <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
     <ul class="nav__links" role="list">
-      <li><a href="../index.html#about"     class="nav__link">Über mich</a></li>
-      <li><a href="../index.html#career"    class="nav__link">Projekte</a></li>
-      <li><a href="index.html"              class="nav__link" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
-      <li><a href="../index.html#downloads" class="nav__link">Downloads</a></li>
-      <li><a href="../index.html#termin"    class="nav__link">Termin</a></li>
-      <li><a href="../index.html#contact"   class="nav__link">Kontakt</a></li>
+      <li><a href="../index.html#about"     class="nav__link" data-de="Über mich" data-en="About">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a></li>
+      <li><a href="index.html"              class="nav__link" data-de="Leistungen" data-en="Services" style="color:var(--color-primary);font-weight:700">Leistungen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link" data-de="Termin" data-en="Appointment">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
     </ul>
     <div class="nav__controls">
       <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
@@ -118,18 +118,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 <div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
-  <a href="../index.html#about"     class="nav__link">Über mich</a>
-  <a href="../index.html#career"    class="nav__link">Projekte</a>
-  <a href="index.html"              class="nav__link">Leistungen</a>
-  <a href="../index.html#downloads" class="nav__link">Downloads</a>
-  <a href="../index.html#termin"    class="nav__link">Termin</a>
-  <a href="../index.html#contact"   class="nav__link">Kontakt</a>
+  <a href="../index.html#about"     class="nav__link" data-de="Über mich" data-en="About">Über mich</a>
+  <a href="../index.html#career"    class="nav__link" data-de="Projekte" data-en="Projects">Projekte</a>
+  <a href="index.html"              class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
+  <a href="../index.html#downloads" class="nav__link" data-de="Downloads" data-en="Downloads">Downloads</a>
+  <a href="../index.html#termin"    class="nav__link" data-de="Termin" data-en="Appointment">Termin</a>
+  <a href="../index.html#contact"   class="nav__link" data-de="Kontakt" data-en="Contact">Kontakt</a>
   <div class="nav__overlay-controls">
     <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
     <button class="btn-lang js-lang-btn">DE | EN</button>
   </div>
 </div>
 
+<div class="lang-de">
 <div class="page-hero">
   <div class="page-hero__inner">
     <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Leistungen</a><span>/</span>Einkauf & Beschaffung</p>
@@ -389,15 +390,278 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="../index.html#termin" class="btn btn--primary">Kostenloses Erstgespräch buchen</a>
   </div>
 </div>
+</div>
+
+<div class="lang-en">
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Services</a><span>/</span>Procurement &amp; Sourcing</p>
+    <p class="page-hero__label">🛒 Procurement &amp; Sourcing</p>
+    <h1 class="page-hero__title">From First Supplier Contact to a Running Procurement Setup</h1>
+    <p class="page-hero__sub">Research, outreach, negotiation, analysis, processes and AI automation — bookable individually or as a complete package. Remote-first, results-driven.</p>
+  </div>
+</div>
+
+<div class="jump-nav">
+  <div class="jump-nav__inner">
+    <a href="#pakete"      class="jump-nav__link">Packages</a>
+    <a href="#recherche"   class="jump-nav__link">Research &amp; Outreach</a>
+    <a href="#analyse"     class="jump-nav__link">Analysis</a>
+    <a href="#verhandlung" class="jump-nav__link">Negotiation</a>
+    <a href="#prozesse"    class="jump-nav__link">Processes &amp; AI</a>
+    <a href="#beratung"    class="jump-nav__link">Consulting</a>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section class="services-section" id="pakete">
+  <div class="services-inner">
+    <a href="index.html" class="back-link">← All Services</a>
+    <div class="section-intro">
+      <span class="section-label">Packages</span>
+      <h2>Complete Solutions with Clear Results</h2>
+      <p>No hourly jungle, no open-ended scope. These packages deliver defined outcomes in a defined time — ideal for a quick start or a long-term procurement partner.</p>
+    </div>
+    <div class="pakete-grid">
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-001 · Starter Package</p>
+        <h3 class="paket-card__title">AI Procurement Sprint</h3>
+        <p class="paket-card__value">Ready-to-use supplier options in one week — researched, contacted, documented.</p>
+        <ul class="paket-card__list">
+          <li>Global supplier research (up to 20 contacts)</li>
+          <li>AI-powered outreach campaign</li>
+          <li>Structured Excel handover</li>
+          <li>Duration: 1 week, remote</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Enquire</a></div>
+      </div>
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-002 · Growth Package</p>
+        <h3 class="paket-card__title">Procurement &amp; Suppliers – Full Setup</h3>
+        <p class="paket-card__value">After three weeks your procurement infrastructure is in place — documented, tested, ready for handover.</p>
+        <ul class="paket-card__list">
+          <li>Sprint (Week 1) + process documentation</li>
+          <li>2 weeks of follow-up support</li>
+          <li>Final report &amp; recommendations</li>
+          <li>Recommended for start-ups &amp; SMEs</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Enquire</a></div>
+      </div>
+      <div class="paket-card">
+        <p class="paket-card__code">PKT-003 · Premium Retainer</p>
+        <h3 class="paket-card__title">Monthly Procurement Support</h3>
+        <p class="paket-card__value">Professional procurement without a permanent hire — flexible, plannable, results-focused.</p>
+        <ul class="paket-card__list">
+          <li>Ongoing research &amp; negotiation</li>
+          <li>Monthly reporting</li>
+          <li>Direct availability</li>
+          <li>Min. 3 months, then monthly cancellation</li>
+        </ul>
+        <div class="paket-card__cta"><a href="../index.html#termin" class="btn btn--orange" style="font-size:0.85rem;padding:10px 20px">Enquire</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH & OUTREACH -->
+<section class="services-section" id="recherche">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Research &amp; Outreach</span>
+      <h2>Find and Approach the Right Suppliers</h2>
+      <p>Qualified supplier contacts worldwide — researched, assessed and professionally approached. No mass-mailing, no unqualified contacts.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-001</p>
+        <h3 class="svc__title">Supplier Research (Global)</h3>
+        <p class="svc__value">Up to 20 qualified suppliers — incl. contact details, brief assessment and Excel handover.</p>
+        <p class="svc__desc">Global research in business directories, B2B platforms and industry databases. Every contact is pre-assessed: certifications, capacity, market presence. Results ready to use immediately.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Global</span><span class="svc__tag">Excel Handover</span><span class="svc__tag">Assessed</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-002</p>
+        <h3 class="svc__title">Market Research &amp; Benchmarking</h3>
+        <p class="svc__value">Are your procurement prices competitive? This analysis creates clarity and a negotiation baseline.</p>
+        <p class="svc__desc">Price comparison for one commodity across at least 5 market suppliers. Assessment of existing suppliers against market benchmarks. Clear recommendation: renegotiate, switch or confirm.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Price Comparison</span><span class="svc__tag">Benchmarking</span><span class="svc__tag">Recommendation</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-003</p>
+        <h3 class="svc__title">E-Mail Outreach Campaign</h3>
+        <p class="svc__value">Up to 30 personalised first-contact e-mails — incl. tracking. Significantly higher response rates than standard enquiries.</p>
+        <p class="svc__desc">Every e-mail is individually tailored to the supplier, their products and your specific requirement. Sending, tracking and handover with a results overview and recommendation for next steps.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Personalised</span><span class="svc__tag">Tracking</span><span class="svc__tag">Up to 30 contacts</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-004</p>
+        <h3 class="svc__title">Follow-up Management</h3>
+        <p class="svc__value">No contact goes cold — structured follow-up, categorise responses, build shortlist.</p>
+        <p class="svc__desc">Follow-up e-mails to all open contacts, categorisation of all responses, prioritised shortlist of the most promising suppliers as a direct basis for the quotation phase.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Follow-up</span><span class="svc__tag">Categorisation</span><span class="svc__tag">Shortlist</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYSIS -->
+<section class="services-section" id="analyse">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Analysis</span>
+      <h2>Data-Driven Decisions Instead of Gut Feeling</h2>
+      <p>Spend analyses uncover hidden savings potential. Supplier evaluations create an objective basis for strategic decisions.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-005</p>
+        <h3 class="svc__title">Spend Analysis</h3>
+        <p class="svc__value">What are you spending, on what — and why? This analysis makes your procurement spend transparent and shows where savings potential is hiding.</p>
+        <p class="svc__desc">Breakdown by category, supplier and period. Pareto analysis, consolidation potential, maverick buying. Clear action recommendations with prioritised savings potential. Data provided by the client.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Pareto Analysis</span><span class="svc__tag">Consolidation</span><span class="svc__tag">Savings Potential</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-006</p>
+        <h3 class="svc__title">Supplier Evaluation</h3>
+        <p class="svc__value">A transparent scoring model by quality, price, reliability and risk — delivered as an Excel model, permanently usable.</p>
+        <p class="svc__desc">Weighted scoring model tailored to your criteria. Supplier matrix with derived action: develop, retain, replace or hedge. Delivered as an updatable Excel file.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Scoring Model</span><span class="svc__tag">Supplier Matrix</span><span class="svc__tag">Excel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEGOTIATION -->
+<section class="services-section" id="verhandlung">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Negotiation</span>
+      <h2>Better Terms Through Better Preparation</h2>
+      <p>80% of negotiation outcomes are decided before the first conversation. Professional preparation and experienced facilitation make the difference.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-007</p>
+        <h3 class="svc__title">Negotiation Preparation</h3>
+        <p class="svc__value">Strategy, target definition, BATNA and argumentation guide — so you walk into every supplier conversation with confidence.</p>
+        <p class="svc__desc">Analysis of the market and supplier situation, definition of target, exit and compromise positions, prepared arguments for typical objections. Delivered as a compact negotiation briefing.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Strategy</span><span class="svc__tag">BATNA</span><span class="svc__tag">Briefing</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-008</p>
+        <h3 class="svc__title">Negotiation Management (Remote)</h3>
+        <p class="svc__value">I lead the supplier conversation for you — as a neutral professional at eye level. Max. 90 minutes per session, remote via video call.</p>
+        <p class="svc__desc">Taking over the conversation or actively supporting during the call. Structured facilitation using proven methodology, live minutes, post-briefing with outcome and next steps.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Remote</span><span class="svc__tag">Facilitation</span><span class="svc__tag">Post-briefing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSES & AI -->
+<section class="services-section" id="prozesse">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Processes &amp; AI</span>
+      <h2>Smart Processes. More Time for What Matters.</h2>
+      <p>Documented processes enable growth. AI automations handle routine tasks. A structured supplier database secures your knowledge permanently.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">EL-009</p>
+        <h3 class="svc__title">Procurement Process Documentation</h3>
+        <p class="svc__value">Your procurement processes — clearly described, understandable for everyone. The foundation for delegation, scaling and quality assurance.</p>
+        <p class="svc__desc">As-is analysis, process diagrams, identification of weaknesses and gaps. Practical documentation with improvement recommendations prioritised by effort/benefit.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">As-Is Analysis</span><span class="svc__tag">Process Diagram</span><span class="svc__tag">Optimisation</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-010</p>
+        <h3 class="svc__title">AI Automation Procurement</h3>
+        <p class="svc__value">Automated workflows for research, outreach and tracking — individually built, integrated directly into your daily work.</p>
+        <p class="svc__desc">Analysis of your routine tasks, building of tailored automations, integration into existing tools (Excel, Google Sheets, e-mail). Delivery incl. documentation and team briefing.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">AI Workflows</span><span class="svc__tag">Automation</span><span class="svc__tag">Excel/Sheets</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">EL-011</p>
+        <h3 class="svc__title">Build a Supplier Database</h3>
+        <p class="svc__value">All supplier data in one place — structured, searchable, analysable. Built once, usable permanently.</p>
+        <p class="svc__desc">Database structure by commodity group, categorisation by product, region, certifications and rating. Migration of existing data, delivered as Excel or Google Sheet.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Structured</span><span class="svc__tag">Categorised</span><span class="svc__tag">Excel/Sheets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="services-section" id="beratung">
+  <div class="services-inner">
+    <div class="section-intro">
+      <span class="section-label">Consulting</span>
+      <h2>Expert Knowledge — Exactly When You Need It</h2>
+      <p>No long project run-up. Flexible consulting hours for specific questions, workshops and technical implementations. Minimum booking 2 hours, fully remote.</p>
+    </div>
+    <div class="svc-list">
+      <div class="svc">
+        <p class="svc__code">ST-001</p>
+        <h3 class="svc__title">Consulting &amp; Advisory</h3>
+        <p class="svc__value">Direct answers to your procurement questions — for workshops, ad-hoc support and strategic sparring.</p>
+        <p class="svc__desc">Areas: procurement methodology, negotiation training, process optimisation, supplier decisions, market assessments. Preparation based on your materials, brief summary after the session.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Workshop</span><span class="svc__tag">Ad-hoc</span><span class="svc__tag">Sparring</span><span class="svc__tag">Min. 2h</span>
+        </div>
+      </div>
+      <div class="svc">
+        <p class="svc__code">ST-002</p>
+        <h3 class="svc__title">Technical Implementation (AI &amp; Excel)</h3>
+        <p class="svc__value">Automations, scripts and dashboards — tailored for your daily procurement work. Fast, practical, with handover and briefing.</p>
+        <p class="svc__desc">Spend analyses, evaluation tools, reporting templates, AI workflows, tracking dashboards. Delivery incl. brief briefing and documentation. Minimum booking 2 hours.</p>
+        <div class="svc__tags">
+          <span class="svc__tag">Excel</span><span class="svc__tag">AI Automation</span><span class="svc__tag">Dashboard</span><span class="svc__tag">Min. 2h</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ready for the Next Step?</h2>
+    <p>Tell me where you stand — I'll show you what makes the biggest difference in your situation.</p>
+    <a href="../index.html#termin" class="btn btn--primary">Book a Free Initial Consultation</a>
+  </div>
+</div>
+</div>
 
 <footer class="footer">
   <div class="footer__grid container">
     <div class="footer__brand">
       <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
-      <p class="footer__tagline">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+      <p class="footer__tagline" data-de="Freiberuflicher Technischer Einkäufer & SQM-Spezialist" data-en="Freelance Technical Buyer & SQM Specialist">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Kontakt</h4>
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
       <ul class="footer__list">
         <li>Egor Becker — BSCP</li>
         <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
@@ -406,24 +670,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Leistungen</h4>
+      <h4 class="footer__heading" data-de="Leistungen" data-en="Services">Leistungen</h4>
       <ul class="footer__list">
-        <li><a href="einkauf.html">Einkauf & Beschaffung</a></li>
-        <li><a href="audit.html">Audit & Qualität</a></li>
-        <li><a href="messe-service.html">Messe-Service</a></li>
+        <li><a href="einkauf.html" data-de="Einkauf & Beschaffung" data-en="Procurement & Sourcing">Einkauf & Beschaffung</a></li>
+        <li><a href="audit.html" data-de="Audit & Qualität" data-en="Audit & Quality">Audit & Qualität</a></li>
+        <li><a href="messe-service.html" data-de="Messe-Service" data-en="Trade Fair Service">Messe-Service</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h4 class="footer__heading">Rechtliches</h4>
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
       <ul class="footer__list">
-        <li><a href="../impressum.html">Impressum</a></li>
-        <li><a href="../datenschutz.html">Datenschutz</a></li>
-        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;">Cookie-Einstellungen</button></li>
+        <li><a href="../impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
+        <li><a href="../datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;" data-de="Cookie-Einstellungen" data-en="Cookie Settings">Cookie-Einstellungen</button></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). Alle Rechte vorbehalten.</p>
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
   </div>
 </footer>
 <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
@@ -433,12 +697,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
   <div class="bscp-cookie__inner">
     <div class="bscp-cookie__text">
-      <strong>Diese Website verwendet Cookies</strong>
-      <p>Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p>
+      <strong class="lang-de">Diese Website verwendet Cookies</strong><strong class="lang-en">This website uses cookies</strong>
+      <p class="lang-de">Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen. Ihre Wahl gilt für alle Seiten dieser Website.</p><p class="lang-en">We use Google Analytics to understand how visitors use our site. You can accept or decline analytics. Your choice applies to all pages of this website.</p>
     </div>
     <div class="bscp-cookie__actions">
-      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out">Ablehnen</button>
-      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok">Akzeptieren</button>
+      <button onclick="bscpDecline()" class="bscp-cookie__btn bscp-cookie__btn--out"><span class="lang-de">Ablehnen</span><span class="lang-en">Decline</span></button>
+      <button onclick="bscpAccept()" class="bscp-cookie__btn bscp-cookie__btn--ok"><span class="lang-de">Akzeptieren</span><span class="lang-en">Accept</span></button>
     </div>
   </div>
 </div>
