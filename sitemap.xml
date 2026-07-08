@@ -26,6 +26,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bscp.online/leistungen/pakete.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/recherche.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/outreach.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/analyse.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/verhandlung.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/prozesse.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/leistungen/beratung.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bscp.online/impressum.html</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>0.3</priority>
