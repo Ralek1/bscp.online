@@ -29,6 +29,8 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://app.cal.com" />
+  <link rel="preload" as="image" href="profile.webp" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -82,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Brand -->
     <a href="#hero" class="nav__brand" aria-label="BSCP.online — Startseite">
-      <img src="logo.svg" alt="BSCP — Becker Supply Chain &amp; Procurement" class="nav__logo-img" />
+      <img src="logo.svg" alt="BSCP — Becker Supply Chain &amp; Procurement" class="nav__logo-img" width="160" height="52" />
     </a>
 
     <!-- Desktop Links -->
@@ -184,7 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Right: photo -->
     <div class="hero__photo-wrap">
-      <img src="profile.webp" alt="Egor Becker — Freelancer Technischer Einkäufer & SQM-Spezialist" class="hero__photo" />
+      <img src="profile.webp" alt="Egor Becker — Freelancer Technischer Einkäufer & SQM-Spezialist" class="hero__photo" width="704" height="556" fetchpriority="high" loading="eager" />
     </div>
 
   </div>
@@ -247,7 +249,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="about__photo-wrap">
         <img src="about-photo.webp"
              alt="Egor Becker — Technischer Einkäufer & SQM-Spezialist, verschränkte Arme"
-             class="about__photo" loading="lazy" />
+             class="about__photo" width="732" height="1308" loading="lazy" />
       </div>
     </div><!-- /.about__right -->
 
@@ -568,24 +570,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       30 Min. Erstgespräch – remote, auf Deutsch oder Englisch
     </p>
 
-    <!-- Cal inline embed code begins -->
-    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30min"></div>
+    <!-- Cal inline embed — lazy loaded via IntersectionObserver -->
+    <div style="width:100%;min-height:600px;overflow:scroll" id="my-cal-inline-30min"></div>
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "30min", {origin:"https://app.cal.com"});
-
-      // Sync Cal.com theme with site theme
-      var _calTheme = (localStorage.getItem('theme') || 'light');
-
-      Cal.ns["30min"]("inline", {
-        elementOrSelector:"#my-cal-inline-30min",
-        config: {"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme": _calTheme},
-        calLink: "egor-becker-mmzx84/30min",
-      });
-
-      Cal.ns["30min"]("ui", {"theme": _calTheme, "cssVarsPerTheme":{"light":{"cal-brand":"#ff8c00"},"dark":{"cal-brand":"#ff8c00"}},"hideEventTypeDetails":false,"layout":"column_view"});
+    (function(){
+      var loaded = false;
+      function loadCal() {
+        if (loaded) return;
+        loaded = true;
+        (function(C,A,L){let p=function(a,ar){a.q.push(ar);};let d=C.document;C.Cal=C.Cal||function(){let cal=C.Cal;let ar=arguments;if(!cal.loaded){cal.ns={};cal.q=cal.q||[];d.head.appendChild(d.createElement("script")).src=A;cal.loaded=true;}if(ar[0]===L){const api=function(){p(api,arguments);};const namespace=ar[1];api.q=api.q||[];if(typeof namespace==="string"){cal.ns[namespace]=cal.ns[namespace]||api;p(cal.ns[namespace],ar);p(cal,["initNamespace",namespace]);}else p(cal,ar);return;}p(cal,ar);};})(window,"https://app.cal.com/embed/embed.js","init");
+        Cal("init","30min",{origin:"https://app.cal.com"});
+        var _calTheme=(localStorage.getItem('theme')||'light');
+        Cal.ns["30min"]("inline",{elementOrSelector:"#my-cal-inline-30min",config:{"layout":"column_view","useSlotsViewOnSmallScreen":"true","theme":_calTheme},calLink:"egor-becker-mmzx84/30min"});
+        Cal.ns["30min"]("ui",{"theme":_calTheme,"cssVarsPerTheme":{"light":{"cal-brand":"#ff8c00"},"dark":{"cal-brand":"#ff8c00"}},"hideEventTypeDetails":false,"layout":"column_view"});
+      }
+      var el = document.getElementById('my-cal-inline-30min');
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries, obs){
+          if (entries[0].isIntersecting) { obs.disconnect(); loadCal(); }
+        }, {rootMargin:'300px'}).observe(el);
+      } else {
+        loadCal(); // Fallback für ältere Browser
+      }
+    })();
     </script>
-    <!-- Cal inline embed code ends -->
+    <!-- Cal inline embed ends -->
   </div>
 </section>
 
@@ -700,7 +709,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Logo & Tagline -->
     <div class="footer__brand">
       <a href="#hero" aria-label="BSCP.online — Startseite">
-        <img src="logo.svg" alt="BSCP Logo" class="footer__logo" />
+        <img src="logo.svg" alt="BSCP Logo" class="footer__logo" width="200" height="72" loading="lazy" />
       </a>
       <p class="footer__tagline" data-de="Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist" data-en="Freelance Technical Buyer &amp; SQM Specialist">
         Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist
