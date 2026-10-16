@@ -61,6 +61,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bscp.online/case-studies/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/case-studies/einkaufsaufbau-werkzeugbau.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/case-studies/lieferantenaudits-iso.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bscp.online/case-studies/messe-sourcing.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bscp.online/impressum.html</loc>
     <lastmod>2026-07-08</lastmod>
     <priority>0.3</priority>

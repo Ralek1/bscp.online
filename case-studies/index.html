@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referenzen & Case Studies — Technischer Einkauf & Lieferantenqualität | BSCP</title>
+  <meta name="description" content="Drei Beispielprojekte aus dem technischen Einkauf: Einkaufsaufbau im Werkzeugbau, Lieferantenaudits nach ISO 9001/19011 und Messe-Sourcing für kritische Komponenten." />
+  <link rel="canonical" href="https://bscp.online/case-studies/" />
+  <meta name="theme-color" content="#1E3A5F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://bscp.online/case-studies/" />
+  <meta property="og:title"       content="Referenzen & Case Studies — BSCP" />
+  <meta property="og:description" content="Drei Beispielprojekte aus dem technischen Einkauf: Einkaufsaufbau, Lieferantenaudits und Messe-Sourcing." />
+  <meta property="og:image"       content="https://bscp.online/og-image.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Referenzen & Case Studies — BSCP",
+    "url": "https://bscp.online/case-studies/",
+    "description": "Beispielprojekte aus dem technischen Einkauf und Supplier Quality Management von Egor Becker.",
+    "author": { "@type": "Person", "name": "Egor Becker", "url": "https://bscp.online" }
+  }
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="preload" href="../fonts/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="../fonts/fonts.css" /></noscript>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page-hero { background: var(--color-navy); padding: 72px 20px; }
+    .page-hero__inner { max-width: 860px; margin: 0 auto; }
+    .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+    .breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb span { margin: 0 8px; }
+    .page-hero__label { font-size: 0.78rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; }
+    .page-hero__title { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin-bottom: 16px; }
+    .page-hero__sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; max-width: 640px; }
+    .disclaimer { display: inline-block; margin-top: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 0.78rem; padding: 6px 14px; border-radius: 20px; }
+
+    .cases-section { padding: 80px 20px; background: var(--color-bg); }
+    .cases-inner { max-width: 1040px; margin: 0 auto; }
+
+    .cases-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 48px; }
+    @media(min-width:760px){ .cases-grid { grid-template-columns: 1fr 1fr; } }
+    @media(min-width:1040px){ .cases-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+    .case-card { background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.07); overflow: hidden; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+    .case-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.12); }
+    .case-card__top { background: var(--color-navy); padding: 28px 28px 24px; }
+    .case-card__category { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 10px; }
+    .case-card__title { font-family: var(--font-serif); font-size: 1.2rem; color: #fff; line-height: 1.4; }
+    .case-card__body { padding: 24px 28px; flex: 1; display: flex; flex-direction: column; gap: 16px; }
+    .case-card__desc { color: var(--color-subtle); font-size: 0.9rem; line-height: 1.7; }
+    .case-card__metrics { display: flex; gap: 12px; flex-wrap: wrap; }
+    .metric { text-align: center; background: var(--color-light); border-radius: 10px; padding: 12px 14px; min-width: 80px; flex: 1; }
+    .metric__value { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--color-navy); display: block; }
+    .metric__label { font-size: 0.68rem; color: var(--color-subtle); line-height: 1.3; margin-top: 2px; }
+    .case-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
+    .case-card__tag { background: var(--color-light); color: var(--color-navy); font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 10px; }
+    .case-card__footer { padding: 0 28px 24px; }
+    .case-card__link { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-weight: 700; font-size: 0.9rem; text-decoration: none; }
+    .case-card__link:hover { color: var(--color-dark); }
+
+    .cta-banner { background: var(--color-navy); padding: 64px 20px; text-align: center; }
+    .cta-banner h2 { color: #fff; margin-bottom: 12px; }
+    .cta-banner p { color: rgba(255,255,255,0.8); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  </style>
+  <!-- Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { analytics_storage:'denied', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', wait_for_update:500 });
+    (function(){ var c=localStorage.getItem('bscp_consent'); if(c==='granted') gtag('consent','update',{analytics_storage:'granted'}); })();
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5XB3J63W');</script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XB3J63W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="progress-bar"></div>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__brand"><img src="../logo.svg" alt="BSCP" class="nav__logo-img" /></a>
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a></li>
+      <li><a href="../index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a></li>
+      <li><a href="../leistungen/"          class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+      <li><a href="index.html"              class="nav__link" data-de="Referenzen" data-en="Cases" style="color:var(--color-primary);font-weight:700">Referenzen</a></li>
+      <li><a href="../index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a></li>
+      <li><a href="../index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a></li>
+      <li><a href="../index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+    </ul>
+    <div class="nav__controls">
+      <button class="btn-icon js-theme-toggle" aria-label="Dark/Light Mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg id="icon-sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2"/><line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button class="btn-lang js-lang-btn">DE | EN</button>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav__overlay" id="nav-overlay" role="dialog" aria-modal="true">
+  <a href="../index.html#about"     class="nav__link" data-de="Über mich"  data-en="About">Über mich</a>
+  <a href="../index.html#career"    class="nav__link" data-de="Projekte"   data-en="Projects">Projekte</a>
+  <a href="../leistungen/"          class="nav__link" data-de="Leistungen" data-en="Services">Leistungen</a>
+  <a href="index.html"              class="nav__link" data-de="Referenzen" data-en="Cases">Referenzen</a>
+  <a href="../index.html#downloads" class="nav__link" data-de="Downloads"  data-en="Downloads">Downloads</a>
+  <a href="../index.html#termin"    class="nav__link" data-de="Termin"     data-en="Appointment">Termin</a>
+  <a href="../index.html#contact"   class="nav__link" data-de="Kontakt"    data-en="Contact">Kontakt</a>
+  <div class="nav__overlay-controls">
+    <button class="btn-icon js-theme-toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></button>
+    <button class="btn-lang js-lang-btn">DE | EN</button>
+  </div>
+</div>
+
+<!-- ── GERMAN ─────────────────────────────────────── -->
+<div class="lang-de">
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span>Referenzen</p>
+    <p class="page-hero__label">📁 Referenzen & Case Studies</p>
+    <h1 class="page-hero__title">Projekte, die für sich sprechen</h1>
+    <p class="page-hero__sub">Drei Beispielszenarien aus dem technischen Einkauf und Supplier Quality Management — mit konkreten Zielen, klarem Vorgehen und messbaren Ergebnissen.</p>
+    <span class="disclaimer">Beispielszenarien — keine Kundenreferenzen</span>
+  </div>
+</div>
+
+<section class="cases-section">
+  <div class="cases-inner">
+    <div class="section-intro">
+      <span class="section-label">Case Studies</span>
+      <h2>So sieht die Arbeit in der Praxis aus</h2>
+      <p style="color:var(--color-subtle);font-size:0.97rem;line-height:1.75;margin-top:10px;">Jedes Projekt zeigt das konkrete Vorgehen: Situation, Methode, Ergebnis. Die Szenarien basieren auf realer Berufserfahrung — aus Datenschutzgründen nicht als Kundenreferenzen gekennzeichnet.</p>
+    </div>
+
+    <div class="cases-grid">
+
+      <!-- Case 1 -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Einkaufsaufbau · Werkzeug- &amp; Formenbau</p>
+          <h2 class="case-card__title">Einkauf von null aufbauen: 90 Tage für ein Werkzeugbau-Startup</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">Ein junges Unternehmen kauft viel, aber ohne System. Keine Lieferantenstruktur, keine Rahmenverträge, keine verlässlichen Zukaufpreise. BSCP baut in 90 Tagen einen schlanken Einkauf auf, der mitwachsen kann.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">Minuten</span><span class="metric__label">statt Tage für Bestellung &amp; Freigabe</span></div>
+            <div class="metric"><span class="metric__value">5–10%</span><span class="metric__label">Kostensenkung durch Rahmenverträge</span></div>
+            <div class="metric"><span class="metric__value">100%</span><span class="metric__label">der Werkzeuge mit Beschaffungsplan</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">Einkaufsorganisation</span>
+            <span class="case-card__tag">Rahmenverträge</span>
+            <span class="case-card__tag">Projektbeschaffung</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="einkaufsaufbau-werkzeugbau.html" class="case-card__link">Case Study lesen →</a>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Supplier Quality · Maschinenbau</p>
+          <h2 class="case-card__title">Die Qualität rutscht ab: drei Lieferantenaudits nach ISO 9001 und ISO 19011</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">Steigende Reklamationen, Nacharbeit in der Montage, erste Terminverzüge. BSCP geht an die Ursache: vor Ort auditieren, Prozesse gemeinsam verbessern, Wirksamkeit prüfen.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">−50%</span><span class="metric__label">Reklamationen in 6 Monaten</span></div>
+            <div class="metric"><span class="metric__value">−10%</span><span class="metric__label">Lieferzeit durch stabilere Prozesse</span></div>
+            <div class="metric"><span class="metric__value">≥95%</span><span class="metric__label">Liefertermintreue (Ziel)</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">ISO 9001</span>
+            <span class="case-card__tag">ISO 19011</span>
+            <span class="case-card__tag">8D</span>
+            <span class="case-card__tag">Lieferantenentwicklung</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="lieferantenaudits-iso.html" class="case-card__link">Case Study lesen →</a>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Messe-Sourcing · Wasserstoff &amp; Elektrolyse</p>
+          <h2 class="case-card__title">Drei Messetage, eine belastbare Shortlist: Lieferanten-Vorqualifizierung auf Branchenmessen</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">Single-Source-Risiko bei kritischen Komponenten. BSCP nutzt die Branchenmesse als effizienten Kanal: vorbereitet, strukturiert bewertet und 48 Stunden nach Messeende lieferbar.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">Top 3</span><span class="metric__label">aus 10 vorqualifizierten Lieferanten</span></div>
+            <div class="metric"><span class="metric__value">Wochen</span><span class="metric__label">statt Monate bis zur Zweitquelle</span></div>
+            <div class="metric"><span class="metric__value">2 Quellen</span><span class="metric__label">je kritischer Komponente</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">Messe-Sourcing</span>
+            <span class="case-card__tag">Vorqualifizierung</span>
+            <span class="case-card__tag">Second Source</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="messe-sourcing.html" class="case-card__link">Case Study lesen →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Ähnliche Herausforderung in Ihrem Unternehmen?</h2>
+    <p>Beschreiben Sie kurz die Situation — ich sage Ihnen direkt, ob und wie ich helfen kann. Festpreis nach kurzem Vorgespräch.</p>
+    <a href="../index.html#contact" class="btn btn--primary">Jetzt Kontakt aufnehmen</a>
+  </div>
+</div>
+</div>
+
+<!-- ── ENGLISH ─────────────────────────────────────── -->
+<div class="lang-en">
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <p class="breadcrumb"><a href="../index.html">Home</a><span>/</span>Cases</p>
+    <p class="page-hero__label">📁 References & Case Studies</p>
+    <h1 class="page-hero__title">Projects That Speak for Themselves</h1>
+    <p class="page-hero__sub">Three example scenarios from technical procurement and supplier quality management — with concrete goals, clear methodology and measurable results.</p>
+    <span class="disclaimer">Example scenarios — not customer references</span>
+  </div>
+</div>
+
+<section class="cases-section">
+  <div class="cases-inner">
+    <div class="section-intro">
+      <span class="section-label">Case Studies</span>
+      <h2>What the Work Looks Like in Practice</h2>
+      <p style="color:var(--color-subtle);font-size:0.97rem;line-height:1.75;margin-top:10px;">Each project shows the concrete approach: situation, method, result. The scenarios are based on real professional experience — presented as example scenarios for data protection reasons.</p>
+    </div>
+
+    <div class="cases-grid">
+
+      <!-- Case 1 EN -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Procurement Setup · Tool &amp; Die Making</p>
+          <h2 class="case-card__title">Building Procurement from Scratch: 90 Days for a Tool-Making Startup</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">A young company buys a lot but without structure. No supplier organisation, no framework agreements, no reliable bought-in prices. BSCP builds a lean procurement function in 90 days that can grow with the company.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">Minutes</span><span class="metric__label">instead of days for ordering &amp; approval</span></div>
+            <div class="metric"><span class="metric__value">5–10%</span><span class="metric__label">cost reduction via framework agreements</span></div>
+            <div class="metric"><span class="metric__value">100%</span><span class="metric__label">of tools with procurement plan</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">Procurement Org</span>
+            <span class="case-card__tag">Framework Contracts</span>
+            <span class="case-card__tag">Project Procurement</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="einkaufsaufbau-werkzeugbau.html" class="case-card__link">Read Case Study →</a>
+        </div>
+      </article>
+
+      <!-- Case 2 EN -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Supplier Quality · Mechanical Engineering</p>
+          <h2 class="case-card__title">Quality Slipping: Three Supplier Audits to ISO 9001 and ISO 19011</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">Rising complaints, rework in assembly, first delivery delays. BSCP addresses the root cause: audit on-site, improve processes jointly with the supplier, verify effectiveness.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">−50%</span><span class="metric__label">complaints within 6 months</span></div>
+            <div class="metric"><span class="metric__value">−10%</span><span class="metric__label">lead time through stable processes</span></div>
+            <div class="metric"><span class="metric__value">≥95%</span><span class="metric__label">on-time delivery (target)</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">ISO 9001</span>
+            <span class="case-card__tag">ISO 19011</span>
+            <span class="case-card__tag">8D</span>
+            <span class="case-card__tag">Supplier Development</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="lieferantenaudits-iso.html" class="case-card__link">Read Case Study →</a>
+        </div>
+      </article>
+
+      <!-- Case 3 EN -->
+      <article class="case-card">
+        <div class="case-card__top">
+          <p class="case-card__category">Trade Fair Sourcing · Hydrogen &amp; Electrolysis</p>
+          <h2 class="case-card__title">Three Trade Fair Days, One Solid Shortlist: Supplier Pre-Qualification at Industry Events</h2>
+        </div>
+        <div class="case-card__body">
+          <p class="case-card__desc">Single-source risk on critical components. BSCP uses the trade fair as an efficient channel: prepared in advance, structured evaluation, deliverable 48 hours after the event closes.</p>
+          <div class="case-card__metrics">
+            <div class="metric"><span class="metric__value">Top 3</span><span class="metric__label">from 10 pre-qualified suppliers</span></div>
+            <div class="metric"><span class="metric__value">Weeks</span><span class="metric__label">instead of months to second source</span></div>
+            <div class="metric"><span class="metric__value">2 Sources</span><span class="metric__label">per critical component</span></div>
+          </div>
+          <div class="case-card__tags">
+            <span class="case-card__tag">Trade Fair Sourcing</span>
+            <span class="case-card__tag">Pre-Qualification</span>
+            <span class="case-card__tag">Second Source</span>
+          </div>
+        </div>
+        <div class="case-card__footer">
+          <a href="messe-sourcing.html" class="case-card__link">Read Case Study →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="container">
+    <h2>Similar Challenge in Your Organisation?</h2>
+    <p>Describe the situation briefly — I'll tell you directly whether and how I can help. Fixed price after a short initial call.</p>
+    <a href="../index.html#contact" class="btn btn--primary">Get in Touch</a>
+  </div>
+</div>
+</div>
+
+<footer class="footer">
+  <div class="footer__grid container">
+    <div class="footer__brand">
+      <a href="../index.html"><img src="../logo.svg" alt="BSCP Logo" class="footer__logo" /></a>
+      <p class="footer__tagline" data-de="Freiberuflicher Technischer Einkäufer & SQM-Spezialist" data-en="Freelance Technical Buyer & SQM Specialist">Freiberuflicher Technischer Einkäufer &amp; SQM-Spezialist</p>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Kontakt" data-en="Contact">Kontakt</h4>
+      <ul class="footer__list">
+        <li>Egor Becker — BSCP</li>
+        <li><a href="tel:+4916099611580">+49 160 99611580</a></li>
+        <li><a href="mailto:info@bscp.online">info@bscp.online</a></li>
+        <li><a href="https://www.linkedin.com/in/egor-becker/" target="_blank" rel="noopener">LinkedIn → Egor Becker</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Leistungen" data-en="Services">Leistungen</h4>
+      <ul class="footer__list">
+        <li><a href="../leistungen/einkauf.html" data-de="Einkauf & Beschaffung" data-en="Procurement & Sourcing">Einkauf &amp; Beschaffung</a></li>
+        <li><a href="../leistungen/audit.html" data-de="Audit & Qualität" data-en="Audit & Quality">Audit &amp; Qualität</a></li>
+        <li><a href="../leistungen/messe-service.html" data-de="Messe-Service" data-en="Trade Fair Service">Messe-Service</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__heading" data-de="Rechtliches" data-en="Legal">Rechtliches</h4>
+      <ul class="footer__list">
+        <li><a href="../impressum.html" data-de="Impressum" data-en="Legal Notice">Impressum</a></li>
+        <li><a href="../datenschutz.html" data-de="Datenschutz" data-en="Privacy Policy">Datenschutz</a></li>
+        <li><button onclick="localStorage.removeItem('bscp_consent');location.reload();" style="background:none;border:none;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;" data-de="Cookie-Einstellungen" data-en="Cookie Settings">Cookie-Einstellungen</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© <span id="footer-year"></span> Egor Becker — Becker Supply Chain &amp; Procurement (BSCP). <span data-de="Alle Rechte vorbehalten." data-en="All rights reserved.">Alle Rechte vorbehalten.</span></p>
+  </div>
+</footer>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+<script src="../script.js"></script>
+
+<div id="bscp-cookie" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="bscp-cookie__inner">
+    <div class="bscp-cookie__text">
+      <strong class="lang-de">Diese Website verwendet Cookies</strong><strong class="lang-en">This website uses cookies</strong>
+      <p class="lang-de">Wir setzen Google Analytics ein, um zu verstehen, wie Besucher unsere Seite nutzen. Sie können der Analyse zustimmen oder sie ablehnen.</p>
+      <p class="lang-en">We use Google Analytics to understand how visitors use our site. You can accept or decline analytics.</p>
+    </div>
+    <div class="bscp-cookie__actions">
+      <button id="bscp-accept" class="btn btn--primary"><span class="lang-de">Akzeptieren</span><span class="lang-en">Accept</span></button>
+      <button id="bscp-decline" class="btn btn--ghost"><span class="lang-de">Ablehnen</span><span class="lang-en">Decline</span></button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
